@@ -134,43 +134,45 @@
 
     <!-- SPLASH -->
     <div id="splashScreen">
-        <div style="font-size:13px;color:#aaa;letter-spacing:3px;font-weight:300;margin-bottom:12px;text-transform:uppercase;">Game made by:</div>
+        <div style="font-size:13px;color:#aaa;letter-spacing:3px;font-weight:300;margin-bottom:12px;text-transform:uppercase;" data-i18n="splash_by">Game made by:</div>
         <img src="xerovonLogo.jpg" alt="Xerovon Logo" />
-        <div class="splash-text">Loading your adventure...</div>
+        <div class="splash-text" data-i18n="splash_loading">Loading your adventure...</div>
     </div>
 
     <!-- LOADING -->
     <div id="loadingScreen" class="screen" style="display:flex;">
-        <h2 style="color:#4CAF50;">🎮 Loading...</h2>
+        <h2 style="color:#4CAF50;" data-i18n="loading_title">🎮 Loading...</h2>
         <div class="spinner"></div>
-        <p style="color:#888; margin-top:16px;">Preparing your adventure</p>
+        <p style="color:#888; margin-top:16px;" data-i18n="loading_sub">Preparing your adventure</p>
     </div>
 
     <!-- START -->
     <div id="startScreen" class="screen">
-        <h1>🎯 Shoot The Boss!</h1>
-        <p style="color:#ccc;">⚔️ Choose your adventure! ⚔️</p>
-        <button id="playBtn">▶ Select Mode</button>
-        <button id="skinBtn" style="background:linear-gradient(135deg,#FF6BFF,#FF1493);">🎨 Skins</button>
+        <h1 data-i18n="start_title">🎯 Shoot The Boss!</h1>
+        <p style="color:#ccc;" data-i18n="start_subtitle">⚔️ Choose your adventure! ⚔️</p>
+        <button id="playBtn" data-i18n="start_play">▶ Select Mode</button>
+        <button id="skinBtn" style="background:linear-gradient(135deg,#FF6BFF,#FF1493);" data-i18n="start_skins">🎨 Skins</button>
     </div>
 
     <!-- MODE SELECT -->
     <div id="modeScreen" class="screen">
-        <button class="quit-btn" id="quitModeBtn">✕ Quit</button>
-        <h2>🎮 Select Game Mode</h2>
+        <button class="quit-btn" id="quitModeBtn" data-i18n="quit">✕ Quit</button>
+        <h2 data-i18n="mode_title">🎮 Select Game Mode</h2>
         <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;width:100%;max-width:380px;align-items:center;">
             <button class="mode-btn" id="mode15Btn" style="width:100%;">
-                <span>⚔️ 15 Levels</span><br>
-                <span style="font-size:13px;font-weight:normal;">Defeat all 15 bosses</span>
+                <span data-i18n="mode_15_label">⚔️ 15 Levels</span><br>
+                <span style="font-size:13px;font-weight:normal;" data-i18n="mode_15_desc">Defeat all 15 bosses</span>
             </button>
             <button class="mode-btn unlimited" id="modeUnlimitedBtn" style="width:100%;">
-                <span>🔥 Unlimited Mode</span><br>
-                <span style="font-size:13px;font-weight:normal;">Beat the clock! ⏱️</span>
+                <span data-i18n="mode_unlimited_label">🔥 Unlimited Mode</span><br>
+                <span style="font-size:13px;font-weight:normal;" data-i18n="mode_unlimited_desc">Beat the clock! ⏱️</span>
             </button>
             <button class="mode-btn matchmaking-btn" id="modeMatchBtn" style="width:100%;">
-                <span id="modeMatchDesc" style="font-size:15px;font-weight:bold;">⚔️ 1v1 Matchmaking</span><br>
-                <span style="font-size:13px;font-weight:normal;">
-                    Battle an AI rival! <span style="color:#ffd700;font-weight:bold;">Elo: <span id="modeMatchEloValue">1000</span></span>
+                <span id="modeMatchDesc" style="font-size:15px;font-weight:bold;" data-i18n="mode_match_desc_prefix">⚔️ 1v1 Matchmaking</span><br>
+                <span style="font-size:13px;font-weight:normal;" id="modeMatchSub">
+                    <span data-i18n="mode_match_desc_prefix" style="display:none;"></span>
+                    <span data-i18n="mode_match_suffix">Battle an AI rival!</span>
+                    <span style="color:#ffd700;font-weight:bold;">Elo: <span id="modeMatchEloValue">1000</span></span>
                 </span>
             </button>
         </div>
@@ -179,46 +181,46 @@
     <!-- SEARCH -->
     <div id="searchScreen">
         <div class="search-spinner"></div>
-        <h2>🔍 Searching for opponent...</h2>
-        <p>Finding a worthy rival</p>
+        <h2 data-i18n="search_title">🔍 Searching for opponent...</h2>
+        <p data-i18n="search_sub">Finding a worthy rival</p>
         <div class="search-bar"><div class="search-bar-fill" id="searchBarFill"></div></div>
     </div>
 
     <!-- HOW TO PLAY -->
     <div id="howScreen" class="screen">
-        <button class="quit-btn" id="quitHowBtn">✕ Quit</button>
-        <h2>⚔️ How to Play</h2>
-        <p>🎯 Click on enemy projectiles to destroy them!</p>
-        <p>💙 Click anywhere to shoot at the boss!</p>
-        <p>⬅️➡️ Use Move buttons to dodge!</p>
-        <p style="margin-top:12px;">⚡ Skills:</p>
-        <p>🔵 Skill 1: 5 Laser Beams (-15% boss health)</p>
-        <p>🔴 Skill 2: 6x Damage for 30 seconds</p>
-        <p>🟢 Skill 3: +1000 Health</p>
-        <p>🛡️ Skill 4: Use Team – 4 teammates (10k HP each, 2500 ammo each, 2.5x dmg)</p>
-        <p id="modeInfo" style="font-size:12px; color:#aaa; margin-top:8px;">📱 Defeat bosses before time runs out!</p>
-        <button id="startGameBtn">⚔️ Start Game</button>
+        <button class="quit-btn" id="quitHowBtn" data-i18n="quit">✕ Quit</button>
+        <h2 data-i18n="how_title">⚔️ How to Play</h2>
+        <p data-i18n="how_instruction1">🎯 Click on enemy projectiles to destroy them!</p>
+        <p data-i18n="how_instruction2">💙 Click anywhere to shoot at the boss!</p>
+        <p data-i18n="how_instruction3">⬅️➡️ Use Move buttons to dodge!</p>
+        <p style="margin-top:12px;" data-i18n="how_skills_title">⚡ Skills:</p>
+        <p data-i18n="how_skill1_desc">🔵 Skill 1: 5 Laser Beams (-15% boss health)</p>
+        <p data-i18n="how_skill2_desc">🔴 Skill 2: 6x Damage for 30 seconds</p>
+        <p data-i18n="how_skill3_desc">🟢 Skill 3: +1000 Health</p>
+        <p data-i18n="how_skill4_desc">🛡️ Skill 4: Use Team – 4 teammates (10k HP each, 2500 ammo each, 2.5x dmg)</p>
+        <p id="modeInfo" style="font-size:12px; color:#aaa; margin-top:8px;" data-i18n="how_mode_info">📱 Defeat bosses before time runs out!</p>
+        <button id="startGameBtn" data-i18n="how_start">⚔️ Start Game</button>
     </div>
 
     <!-- SKINS -->
     <div id="skinScreen" class="screen">
-        <button class="back-btn" id="skinBackBtn">← Back</button>
-        <h2>🎨 Choose Your Skin</h2>
-        <p style="color:#aaa; font-size:13px;">Select a skin for your character</p>
-        <div class="score-label">⭐ Your Score: <span id="skinScore">0</span></div>
+        <button class="back-btn" id="skinBackBtn" data-i18n="back">← Back</button>
+        <h2 data-i18n="skin_title">🎨 Choose Your Skin</h2>
+        <p style="color:#aaa; font-size:13px;" data-i18n="skin_subtitle">Select a skin for your character</p>
+        <div class="score-label"><span data-i18n="skin_score_label">⭐ Your Score:</span> <span id="skinScore">0</span></div>
         <div class="skin-grid" id="skinGrid"></div>
-        <p id="skinStatus" style="color:#aaa; font-size:10px; margin-top:6px;">Select a skin to equip</p>
+        <p id="skinStatus" style="color:#aaa; font-size:10px; margin-top:6px;" data-i18n="skin_status_select">Select a skin to equip</p>
     </div>
 
     <!-- IN-GAME UI -->
     <div id="ui" style="display:none;">
-        <div style="color:#ff6b6b;">❤️ <span id="playerHealth">3000</span></div>
-        <div style="color:#ffd93d;">👹 <span id="bossHealth">100</span>%</div>
-        <div style="color:#6bcbff;">📊 <span id="levelDisplay">1</span>/<span id="maxLevelDisplay">15</span></div>
-        <div style="color:#ff6bff;">⏱️ <span id="timerDisplay">500</span>s</div>
-        <div style="color:#ffd700;display:none;" id="scoreDisplay">⭐ Score: <span id="scoreValue">0</span></div>
-        <div style="color:#00ffaa;" id="teamHealthDisplay">🛡️ Team HP: <span id="teamHealthValue">0</span></div>
-        <div style="color:#ffaa00;" id="teamAmmoDisplay">🔫 Team Ammo: <span id="teamAmmoValue">0</span></div>
+        <div><span data-i18n="game_health">❤️</span> <span id="playerHealth">3000</span></div>
+        <div><span data-i18n="game_boss">👹</span> <span id="bossHealth">100</span>%</div>
+        <div><span data-i18n="game_level">📊</span> <span id="levelDisplay">1</span>/<span id="maxLevelDisplay">15</span></div>
+        <div><span data-i18n="game_timer">⏱️</span> <span id="timerDisplay">500</span>s</div>
+        <div style="color:#ffd700;display:none;" id="scoreDisplay"><span data-i18n="game_score">⭐ Score:</span> <span id="scoreValue">0</span></div>
+        <div style="color:#00ffaa;" id="teamHealthDisplay"><span data-i18n="team_hp">🛡️ Team HP:</span> <span id="teamHealthValue">0</span></div>
+        <div style="color:#ffaa00;" id="teamAmmoDisplay"><span data-i18n="team_ammo">🔫 Team Ammo:</span> <span id="teamAmmoValue">0</span></div>
     </div>
 
     <div id="bossHealthBar" style="display:none;"><div id="bossHealthFill"></div></div>
@@ -229,73 +231,73 @@
 
     <!-- PAUSE -->
     <div id="pauseOverlay">
-        <h2>⏸️ PAUSED</h2>
-        <p>Game is paused</p>
-        <button class="resume-btn" id="manualResumeBtn">▶ Resume</button>
+        <h2 data-i18n="pause_title">⏸️ PAUSED</h2>
+        <p data-i18n="pause_sub">Game is paused</p>
+        <button class="resume-btn" id="manualResumeBtn" data-i18n="resume_btn">▶ Resume</button>
     </div>
 
-    <button id="exitBtn">✕ Exit</button>
+    <button id="exitBtn" data-i18n="quit">✕ Exit</button>
 
     <!-- CONTROLS -->
     <div id="controls" style="display:none;">
         <div class="row">
-            <button class="btn skill-btn" id="skill1Btn">🔵 Lasers</button>
-            <button class="btn skill-btn" id="skill2Btn">🔴 6x Dmg</button>
-            <button class="btn skill-btn" id="skill3Btn">🟢 +1000 HP</button>
-            <button class="btn skill-btn" id="skillTeamBtn">🛡️ Use Team</button>
+            <button class="btn skill-btn" id="skill1Btn" data-i18n="skill_lasers">🔵 Lasers</button>
+            <button class="btn skill-btn" id="skill2Btn" data-i18n="skill_dmg">🔴 6x Dmg</button>
+            <button class="btn skill-btn" id="skill3Btn" data-i18n="skill_hp">🟢 +1000 HP</button>
+            <button class="btn skill-btn" id="skillTeamBtn" data-i18n="skill_team">🛡️ Use Team</button>
         </div>
         <div class="row">
-            <span class="cooldown-text" id="cd1">✅ Ready</span>
-            <span class="cooldown-text" id="cd2">✅ Ready</span>
-            <span class="cooldown-text" id="cd3">✅ Ready</span>
-            <span class="cooldown-text" id="cdTeam">✅ Ready</span>
+            <span class="cooldown-text" id="cd1" data-i18n="cooldown_ready">✅ Ready</span>
+            <span class="cooldown-text" id="cd2" data-i18n="cooldown_ready">✅ Ready</span>
+            <span class="cooldown-text" id="cd3" data-i18n="cooldown_ready">✅ Ready</span>
+            <span class="cooldown-text" id="cdTeam" data-i18n="cooldown_ready">✅ Ready</span>
         </div>
         <div class="row" style="margin-top:3px;">
-            <button class="btn" id="moveLeft">⬅️ Left</button>
-            <button class="btn" id="moveRight">Right ➡️</button>
+            <button class="btn" id="moveLeft" data-i18n="move_left">⬅️ Left</button>
+            <button class="btn" id="moveRight" data-i18n="move_right">Right ➡️</button>
         </div>
     </div>
 
     <!-- RETRY -->
     <div id="retryScreen" class="screen">
-        <button class="quit-btn" id="quitRetry">✕ Quit</button>
-        <h2 style="color:#ff4444;">💀 Defeated!</h2>
-        <p>The boss was too strong! Try again!</p>
-        <button id="retryBtn">🔄 Retry Level</button>
+        <button class="quit-btn" id="quitRetry" data-i18n="quit">✕ Quit</button>
+        <h2 style="color:#ff4444;" data-i18n="retry_title">💀 Defeated!</h2>
+        <p data-i18n="retry_desc">The boss was too strong! Try again!</p>
+        <button id="retryBtn" data-i18n="retry_btn">🔄 Retry Level</button>
     </div>
 
     <!-- TIME UP -->
     <div id="timeUpScreen" class="screen">
-        <button class="quit-btn" id="quitTimeUp">✕ Quit</button>
-        <h2 style="color:#ff6b35;">⏱️ Time's Up!</h2>
-        <p>You ran out of time!</p>
-        <div style="color:#ffd700;font-size:22px;">⭐ Score: <span id="finalScore">0</span></div>
-        <button id="timeUpRetry">🔄 Try Again</button>
+        <button class="quit-btn" id="quitTimeUp" data-i18n="quit">✕ Quit</button>
+        <h2 style="color:#ff6b35;" data-i18n="timeup_title">⏱️ Time's Up!</h2>
+        <p data-i18n="timeup_desc">You ran out of time!</p>
+        <div style="color:#ffd700;font-size:22px;"><span data-i18n="timeup_score">⭐ Score:</span> <span id="finalScore">0</span></div>
+        <button id="timeUpRetry" data-i18n="timeup_retry">🔄 Try Again</button>
     </div>
 
     <!-- WIN -->
     <div id="winScreen" class="screen">
-        <button class="quit-btn" id="quitWin">✕ Quit</button>
-        <h2 id="winTitle">🏆 YOU ARE A LEGEND!</h2>
-        <p id="winSubtitle" style="color:#ffd700;font-size:18px;">All 15 bosses defeated!</p>
-        <div style="color:#ffd700;font-size:22px;">⭐ Score: <span id="winScore">0</span></div>
-        <button id="restartBtn">🔄 Play Again</button>
+        <button class="quit-btn" id="quitWin" data-i18n="quit">✕ Quit</button>
+        <h2 id="winTitle" data-i18n="win_title_15">🏆 YOU ARE A LEGEND!</h2>
+        <p id="winSubtitle" style="color:#ffd700;font-size:18px;" data-i18n="win_subtitle_15">All 15 bosses defeated!</p>
+        <div style="color:#ffd700;font-size:22px;"><span data-i18n="win_score">⭐ Score:</span> <span id="winScore">0</span></div>
+        <button id="restartBtn" data-i18n="win_restart">🔄 Play Again</button>
     </div>
 
     <!-- MATCH RESULT -->
     <div id="matchResultScreen" class="screen">
-        <button class="quit-btn" id="quitMatchResult">✕ Quit</button>
-        <h2 id="matchResultTitle" style="font-size:clamp(28px,6vw,48px);">🏆 Victory!</h2>
-        <p id="matchResultSub" style="font-size:18px;color:#aaa;">You defeated the AI opponent!</p>
+        <button class="quit-btn" id="quitMatchResult" data-i18n="quit">✕ Quit</button>
+        <h2 id="matchResultTitle" style="font-size:clamp(28px,6vw,48px);" data-i18n="match_result_title_win">🏆 Victory!</h2>
+        <p id="matchResultSub" style="font-size:18px;color:#aaa;" data-i18n="match_result_sub_win">You defeated the AI opponent!</p>
         <div style="font-size:20px;margin:8px 0;">
-            💥 Your hits: <span id="matchYourHitsDisplay">0</span>
-            <span style="margin-left:16px;">🤖 AI hits:</span> <span id="matchAiHitsDisplay">0</span>
+            <span data-i18n="match_result_hits">💥 Your hits:</span> <span id="matchYourHitsDisplay">0</span>
+            <span style="margin-left:16px;" data-i18n="match_result_ai_hits">🤖 AI hits:</span> <span id="matchAiHitsDisplay">0</span>
         </div>
         <div style="font-size:24px;font-weight:bold;margin:4px 0;" id="matchEloChangeDisplay">+0</div>
         <div style="font-size:18px;color:#ffd700;">⭐ Elo: <span id="matchEloAfterDisplay">1000</span></div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:12px;">
-            <button id="matchRematchBtn">🔄 Rematch</button>
-            <button id="matchHomeBtn">🏠 Home</button>
+            <button id="matchRematchBtn" data-i18n="match_rematch">🔄 Rematch</button>
+            <button id="matchHomeBtn" data-i18n="match_home">🏠 Home</button>
         </div>
     </div>
 
@@ -332,17 +334,27 @@
     }
 
     // ============================================================
-    //  TRANSLATIONS (full set, ad-free)
+    //  TRANSLATIONS (full set, ad-free) – all keys now present
     // ============================================================
     var TRANSLATIONS = {
         en: {
-            start_title:'🎯 Shoot The Boss!', start_subtitle:'⚔️ Choose your adventure! ⚔️',
-            start_play:'▶ Select Mode', start_skins:'🎨 Skins',
+            splash_by:'Game made by:',
+            splash_loading:'Loading your adventure...',
+            loading_title:'🎮 Loading...',
+            loading_sub:'Preparing your adventure',
+            start_title:'🎯 Shoot The Boss!',
+            start_subtitle:'⚔️ Choose your adventure! ⚔️',
+            start_play:'▶ Select Mode',
+            start_skins:'🎨 Skins',
             mode_title:'🎮 Select Game Mode',
-            mode_15_label:'⚔️ 15 Levels', mode_15_desc:'Defeat all 15 bosses',
-            mode_unlimited_label:'🔥 Unlimited Mode', mode_unlimited_desc:'Beat the clock! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking —',
-            search_title:'🔍 Searching for opponent...', search_sub:'Finding a worthy rival',
+            mode_15_label:'⚔️ 15 Levels',
+            mode_15_desc:'Defeat all 15 bosses',
+            mode_unlimited_label:'🔥 Unlimited Mode',
+            mode_unlimited_desc:'Beat the clock! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking',
+            mode_match_suffix:'Battle an AI rival!',
+            search_title:'🔍 Searching for opponent...',
+            search_sub:'Finding a worthy rival',
             how_title:'⚔️ How to Play',
             how_instruction1:'🎯 Click on enemy projectiles to destroy them!',
             how_instruction2:'💙 Click anywhere to shoot at the boss!',
@@ -357,34 +369,72 @@
             how_mode_info_unlimited:'🔥 Beat the clock! Each level adds 370 seconds!',
             how_mode_info_matchmaking:'⚔️ Battle an AI rival! Your Elo changes with every match. Use skills to outlast the AI!',
             how_start:'⚔️ Start Game',
-            skin_title:'🎨 Choose Your Skin', skin_subtitle:'Select a skin for your character',
-            skin_score_label:'⭐ Your Score:', skin_status_select:'Select a skin to equip',
-            skin_status_unlock:'🎉 {name} unlocked!', skin_status_not_enough:'❌ Not enough points',
+            skin_title:'🎨 Choose Your Skin',
+            skin_subtitle:'Select a skin for your character',
+            skin_score_label:'⭐ Your Score:',
+            skin_status_select:'Select a skin to equip',
+            skin_status_unlock:'🎉 {name} unlocked!',
+            skin_status_not_enough:'❌ Not enough points',
             skin_status_equip:'✅ {name} equipped!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ Score:',
-            skill_lasers:'🔵 Lasers', skill_dmg:'🔴 6x Dmg', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ Use Team',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ Score:',
+            team_hp:'🛡️ Team HP:',
+            team_ammo:'🔫 Team Ammo:',
+            skill_lasers:'🔵 Lasers',
+            skill_dmg:'🔴 6x Dmg',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ Use Team',
             cooldown_ready:'✅ Ready',
-            move_left:'⬅️ Left', move_right:'Right ➡️',
-            quit:'✕ Quit', back:'← Back',
-            pause_title:'⏸️ PAUSED', pause_sub:'Game is paused', resume_btn:'▶ Resume',
-            retry_title:'💀 Defeated!', retry_desc:'The boss was too strong! Try again!', retry_btn:'🔄 Retry Level',
-            timeup_title:'⏱️ Time\'s Up!', timeup_desc:'You ran out of time!', timeup_score:'⭐ Score:', timeup_retry:'🔄 Try Again',
-            win_title_15:'🏆 YOU ARE A LEGEND!', win_subtitle_15:'All 15 bosses defeated!',
-            win_title_unlimited:'🔥 UNLIMITED MODE COMPLETE!', win_subtitle_unlimited:'You survived {level} levels! Amazing!',
-            win_score:'⭐ Score:', win_restart:'🔄 Play Again',
-            match_result_title_win:'🏆 VICTORY!', match_result_title_loss:'💀 DEFEAT!',
-            match_result_sub_win:'You outplayed the AI opponent!', match_result_sub_loss:'The AI was too strong this time!',
-            match_result_hits:'💥 Your hits:', match_result_ai_hits:'🤖 AI hits:',
-            match_rematch:'🔄 Rematch', match_home:'🏠 Home'
+            move_left:'⬅️ Left',
+            move_right:'Right ➡️',
+            quit:'✕ Quit',
+            back:'← Back',
+            pause_title:'⏸️ PAUSED',
+            pause_sub:'Game is paused',
+            resume_btn:'▶ Resume',
+            retry_title:'💀 Defeated!',
+            retry_desc:'The boss was too strong! Try again!',
+            retry_btn:'🔄 Retry Level',
+            timeup_title:'⏱️ Time\'s Up!',
+            timeup_desc:'You ran out of time!',
+            timeup_score:'⭐ Score:',
+            timeup_retry:'🔄 Try Again',
+            win_title_15:'🏆 YOU ARE A LEGEND!',
+            win_subtitle_15:'All 15 bosses defeated!',
+            win_title_unlimited:'🔥 UNLIMITED MODE COMPLETE!',
+            win_subtitle_unlimited:'You survived {level} levels! Amazing!',
+            win_score:'⭐ Score:',
+            win_restart:'🔄 Play Again',
+            match_result_title_win:'🏆 VICTORY!',
+            match_result_title_loss:'💀 DEFEAT!',
+            match_result_sub_win:'You outplayed the AI opponent!',
+            match_result_sub_loss:'The AI was too strong this time!',
+            match_result_hits:'💥 Your hits:',
+            match_result_ai_hits:'🤖 AI hits:',
+            match_rematch:'🔄 Rematch',
+            match_home:'🏠 Home'
         },
         es: {
-            start_title:'🎯 ¡Dispara al Jefe!', start_subtitle:'⚔️ ¡Elige tu aventura! ⚔️',
-            start_play:'▶ Seleccionar Modo', start_skins:'🎨 Pieles',
+            splash_by:'Juego creado por:',
+            splash_loading:'Cargando tu aventura...',
+            loading_title:'🎮 Cargando...',
+            loading_sub:'Preparando tu aventura',
+            start_title:'🎯 ¡Dispara al Jefe!',
+            start_subtitle:'⚔️ ¡Elige tu aventura! ⚔️',
+            start_play:'▶ Seleccionar Modo',
+            start_skins:'🎨 Pieles',
             mode_title:'🎮 Selecciona el Modo de Juego',
-            mode_15_label:'⚔️ 15 Niveles', mode_15_desc:'Derrota a los 15 jefes',
-            mode_unlimited_label:'🔥 Modo Ilimitado', mode_unlimited_desc:'¡Gana el reloj! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking —',
-            search_title:'🔍 Buscando oponente...', search_sub:'Encontrando un rival digno',
+            mode_15_label:'⚔️ 15 Niveles',
+            mode_15_desc:'Derrota a los 15 jefes',
+            mode_unlimited_label:'🔥 Modo Ilimitado',
+            mode_unlimited_desc:'¡Gana el reloj! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking',
+            mode_match_suffix:'¡Enfréntate a un rival IA!',
+            search_title:'🔍 Buscando oponente...',
+            search_sub:'Encontrando un rival digno',
             how_title:'⚔️ Cómo Jugar',
             how_instruction1:'🎯 ¡Haz clic en los proyectiles enemigos para destruirlos!',
             how_instruction2:'💙 Haz clic en cualquier lugar para disparar al jefe',
@@ -399,34 +449,72 @@
             how_mode_info_unlimited:'🔥 Gana el reloj. Cada nivel añade 370 segundos.',
             how_mode_info_matchmaking:'⚔️ Enfréntate a un rival IA! Tu Elo cambia con cada partida. Usa habilidades para superar a la IA!',
             how_start:'⚔️ Empezar Juego',
-            skin_title:'🎨 Elige tu Piel', skin_subtitle:'Selecciona una piel para tu personaje',
-            skin_score_label:'⭐ Tu puntuación:', skin_status_select:'Selecciona una piel para equipar',
-            skin_status_unlock:'🎉 ¡{name} desbloqueada!', skin_status_not_enough:'❌ Puntos insuficientes',
+            skin_title:'🎨 Elige tu Piel',
+            skin_subtitle:'Selecciona una piel para tu personaje',
+            skin_score_label:'⭐ Tu puntuación:',
+            skin_status_select:'Selecciona una piel para equipar',
+            skin_status_unlock:'🎉 ¡{name} desbloqueada!',
+            skin_status_not_enough:'❌ Puntos insuficientes',
             skin_status_equip:'✅ {name} equipada!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ Puntuación:',
-            skill_lasers:'🔵 Láseres', skill_dmg:'🔴 x6 Daño', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ Usar Equipo',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ Puntuación:',
+            team_hp:'🛡️ HP del equipo:',
+            team_ammo:'🔫 Munición del equipo:',
+            skill_lasers:'🔵 Láseres',
+            skill_dmg:'🔴 x6 Daño',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ Usar Equipo',
             cooldown_ready:'✅ Listo',
-            move_left:'⬅️ Izquierda', move_right:'Derecha ➡️',
-            quit:'✕ Salir', back:'← Atrás',
-            pause_title:'⏸️ PAUSADO', pause_sub:'Juego en pausa', resume_btn:'▶ Reanudar',
-            retry_title:'💀 ¡Derrotado!', retry_desc:'¡El jefe era demasiado fuerte! ¡Inténtalo de nuevo!', retry_btn:'🔄 Reintentar nivel',
-            timeup_title:'⏱️ ¡Tiempo agotado!', timeup_desc:'¡Se acabó el tiempo!', timeup_score:'⭐ Puntuación:', timeup_retry:'🔄 Intentar de nuevo',
-            win_title_15:'🏆 ¡ERES UNA LEYENDA!', win_subtitle_15:'¡Derrotaste a los 15 jefes!',
-            win_title_unlimited:'🔥 ¡MODO ILIMITADO COMPLETADO!', win_subtitle_unlimited:'¡Sobreviviste {level} niveles! ¡Increíble!',
-            win_score:'⭐ Puntuación:', win_restart:'🔄 Jugar de nuevo',
-            match_result_title_win:'🏆 VICTORIA!', match_result_title_loss:'💀 DERROTA!',
-            match_result_sub_win:'¡Superaste al rival IA!', match_result_sub_loss:'¡La IA fue demasiado fuerte esta vez!',
-            match_result_hits:'💥 Tus golpes:', match_result_ai_hits:'🤖 Golpes IA:',
-            match_rematch:'🔄 Revancha', match_home:'🏠 Inicio'
+            move_left:'⬅️ Izquierda',
+            move_right:'Derecha ➡️',
+            quit:'✕ Salir',
+            back:'← Atrás',
+            pause_title:'⏸️ PAUSADO',
+            pause_sub:'Juego en pausa',
+            resume_btn:'▶ Reanudar',
+            retry_title:'💀 ¡Derrotado!',
+            retry_desc:'¡El jefe era demasiado fuerte! ¡Inténtalo de nuevo!',
+            retry_btn:'🔄 Reintentar nivel',
+            timeup_title:'⏱️ ¡Tiempo agotado!',
+            timeup_desc:'¡Se acabó el tiempo!',
+            timeup_score:'⭐ Puntuación:',
+            timeup_retry:'🔄 Intentar de nuevo',
+            win_title_15:'🏆 ¡ERES UNA LEYENDA!',
+            win_subtitle_15:'¡Derrotaste a los 15 jefes!',
+            win_title_unlimited:'🔥 ¡MODO ILIMITADO COMPLETADO!',
+            win_subtitle_unlimited:'¡Sobreviviste {level} niveles! ¡Increíble!',
+            win_score:'⭐ Puntuación:',
+            win_restart:'🔄 Jugar de nuevo',
+            match_result_title_win:'🏆 VICTORIA!',
+            match_result_title_loss:'💀 DERROTA!',
+            match_result_sub_win:'¡Superaste al rival IA!',
+            match_result_sub_loss:'¡La IA fue demasiado fuerte esta vez!',
+            match_result_hits:'💥 Tus golpes:',
+            match_result_ai_hits:'🤖 Golpes IA:',
+            match_rematch:'🔄 Revancha',
+            match_home:'🏠 Inicio'
         },
         fr: {
-            start_title:'🎯 Tire sur le Boss!', start_subtitle:'⚔️ Choisissez votre aventure! ⚔️',
-            start_play:'▶ Sélectionner le mode', start_skins:'🎨 Skins',
+            splash_by:'Jeu créé par :',
+            splash_loading:'Chargement de votre aventure...',
+            loading_title:'🎮 Chargement...',
+            loading_sub:'Préparation de votre aventure',
+            start_title:'🎯 Tire sur le Boss!',
+            start_subtitle:'⚔️ Choisissez votre aventure! ⚔️',
+            start_play:'▶ Sélectionner le mode',
+            start_skins:'🎨 Skins',
             mode_title:'🎮 Sélectionner le mode de jeu',
-            mode_15_label:'⚔️ 15 Niveaux', mode_15_desc:'Vaincre les 15 boss',
-            mode_unlimited_label:'🔥 Mode Illimité', mode_unlimited_desc:'Battez le chrono! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking —',
-            search_title:'🔍 Recherche d\'un adversaire...', search_sub:'Trouver un rival digne',
+            mode_15_label:'⚔️ 15 Niveaux',
+            mode_15_desc:'Vaincre les 15 boss',
+            mode_unlimited_label:'🔥 Mode Illimité',
+            mode_unlimited_desc:'Battez le chrono! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking',
+            mode_match_suffix:'Affrontez un rival IA!',
+            search_title:'🔍 Recherche d\'un adversaire...',
+            search_sub:'Trouver un rival digne',
             how_title:'⚔️ Comment jouer',
             how_instruction1:'🎯 Cliquez sur les projectiles ennemis pour les détruire!',
             how_instruction2:'💙 Cliquez n\'importe où pour tirer sur le boss!',
@@ -441,34 +529,72 @@
             how_mode_info_unlimited:'🔥 Battez le chrono! Chaque niveau ajoute 370 secondes!',
             how_mode_info_matchmaking:'⚔️ Affrontez un rival IA! Votre Elo change à chaque match. Utilisez vos compétences pour surpasser l\'IA!',
             how_start:'⚔️ Commencer le jeu',
-            skin_title:'🎨 Choisissez votre skin', skin_subtitle:'Sélectionnez un skin pour votre personnage',
-            skin_score_label:'⭐ Votre score:', skin_status_select:'Sélectionnez un skin à équiper',
-            skin_status_unlock:'🎉 {name} débloqué!', skin_status_not_enough:'❌ Pas assez de points',
+            skin_title:'🎨 Choisissez votre skin',
+            skin_subtitle:'Sélectionnez un skin pour votre personnage',
+            skin_score_label:'⭐ Votre score:',
+            skin_status_select:'Sélectionnez un skin à équiper',
+            skin_status_unlock:'🎉 {name} débloqué!',
+            skin_status_not_enough:'❌ Pas assez de points',
             skin_status_equip:'✅ {name} équipé!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ Score:',
-            skill_lasers:'🔵 Lasers', skill_dmg:'🔴 x6 Dégâts', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ Équipe',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ Score:',
+            team_hp:'🛡️ HP de l\'équipe:',
+            team_ammo:'🔫 Munitions de l\'équipe:',
+            skill_lasers:'🔵 Lasers',
+            skill_dmg:'🔴 x6 Dégâts',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ Équipe',
             cooldown_ready:'✅ Prêt',
-            move_left:'⬅️ Gauche', move_right:'Droite ➡️',
-            quit:'✕ Quitter', back:'← Retour',
-            pause_title:'⏸️ PAUSE', pause_sub:'Jeu en pause', resume_btn:'▶ Reprendre',
-            retry_title:'💀 Vaincu!', retry_desc:'Le boss était trop fort! Réessayez!', retry_btn:'🔄 Réessayer le niveau',
-            timeup_title:'⏱️ Temps écoulé!', timeup_desc:'Vous n\'avez plus de temps!', timeup_score:'⭐ Score:', timeup_retry:'🔄 Réessayer',
-            win_title_15:'🏆 VOUS ÊTES UNE LÉGENDE!', win_subtitle_15:'Les 15 boss sont vaincus!',
-            win_title_unlimited:'🔥 MODE ILLIMITÉ TERMINÉ!', win_subtitle_unlimited:'Vous avez survécu {level} niveaux! Incroyable!',
-            win_score:'⭐ Score:', win_restart:'🔄 Rejouer',
-            match_result_title_win:'🏆 VICTOIRE!', match_result_title_loss:'💀 DÉFAITE!',
-            match_result_sub_win:'Vous avez surpassé l\'IA!', match_result_sub_loss:'L\'IA était trop forte cette fois!',
-            match_result_hits:'💥 Vos coups:', match_result_ai_hits:'🤖 Coups IA:',
-            match_rematch:'🔄 Revanche', match_home:'🏠 Accueil'
+            move_left:'⬅️ Gauche',
+            move_right:'Droite ➡️',
+            quit:'✕ Quitter',
+            back:'← Retour',
+            pause_title:'⏸️ PAUSE',
+            pause_sub:'Jeu en pause',
+            resume_btn:'▶ Reprendre',
+            retry_title:'💀 Vaincu!',
+            retry_desc:'Le boss était trop fort! Réessayez!',
+            retry_btn:'🔄 Réessayer le niveau',
+            timeup_title:'⏱️ Temps écoulé!',
+            timeup_desc:'Vous n\'avez plus de temps!',
+            timeup_score:'⭐ Score:',
+            timeup_retry:'🔄 Réessayer',
+            win_title_15:'🏆 VOUS ÊTES UNE LÉGENDE!',
+            win_subtitle_15:'Les 15 boss sont vaincus!',
+            win_title_unlimited:'🔥 MODE ILLIMITÉ TERMINÉ!',
+            win_subtitle_unlimited:'Vous avez survécu {level} niveaux! Incroyable!',
+            win_score:'⭐ Score:',
+            win_restart:'🔄 Rejouer',
+            match_result_title_win:'🏆 VICTOIRE!',
+            match_result_title_loss:'💀 DÉFAITE!',
+            match_result_sub_win:'Vous avez surpassé l\'IA!',
+            match_result_sub_loss:'L\'IA était trop forte cette fois!',
+            match_result_hits:'💥 Vos coups:',
+            match_result_ai_hits:'🤖 Coups IA:',
+            match_rematch:'🔄 Revanche',
+            match_home:'🏠 Accueil'
         },
         de: {
-            start_title:'🎯 Erschieße den Boss!', start_subtitle:'⚔️ Wähle dein Abenteuer! ⚔️',
-            start_play:'▶ Modus wählen', start_skins:'🎨 Skins',
+            splash_by:'Spiel erstellt von:',
+            splash_loading:'Lade dein Abenteuer...',
+            loading_title:'🎮 Laden...',
+            loading_sub:'Bereite dein Abenteuer vor',
+            start_title:'🎯 Erschieße den Boss!',
+            start_subtitle:'⚔️ Wähle dein Abenteuer! ⚔️',
+            start_play:'▶ Modus wählen',
+            start_skins:'🎨 Skins',
             mode_title:'🎮 Spielmodus wählen',
-            mode_15_label:'⚔️ 15 Level', mode_15_desc:'Besiege alle 15 Bosse',
-            mode_unlimited_label:'🔥 Unbegrenzter Modus', mode_unlimited_desc:'Schlage die Uhr! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking —',
-            search_title:'🔍 Suche nach Gegner...', search_sub:'Finde einen würdigen Rivalen',
+            mode_15_label:'⚔️ 15 Level',
+            mode_15_desc:'Besiege alle 15 Bosse',
+            mode_unlimited_label:'🔥 Unbegrenzter Modus',
+            mode_unlimited_desc:'Schlage die Uhr! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking',
+            mode_match_suffix:'Kämpfe gegen einen KI-Rivalen!',
+            search_title:'🔍 Suche nach Gegner...',
+            search_sub:'Finde einen würdigen Rivalen',
             how_title:'⚔️ Spielanleitung',
             how_instruction1:'🎯 Klicke auf feindliche Projektile, um sie zu zerstören!',
             how_instruction2:'💙 Klicke irgendwo, um auf den Boss zu schießen!',
@@ -483,34 +609,72 @@
             how_mode_info_unlimited:'🔥 Schlage die Uhr! Jedes Level fügt 370 Sekunden hinzu!',
             how_mode_info_matchmaking:'⚔️ Kämpfe gegen einen KI-Rivalen! Dein Elo ändert sich mit jedem Spiel. Nutze Fähigkeiten, um die KI zu übertreffen!',
             how_start:'⚔️ Spiel starten',
-            skin_title:'🎨 Wähle deinen Skin', skin_subtitle:'Wähle einen Skin für deinen Charakter',
-            skin_score_label:'⭐ Deine Punktzahl:', skin_status_select:'Wähle einen Skin zum Ausrüsten',
-            skin_status_unlock:'🎉 {name} freigeschaltet!', skin_status_not_enough:'❌ Nicht genug Punkte',
+            skin_title:'🎨 Wähle deinen Skin',
+            skin_subtitle:'Wähle einen Skin für deinen Charakter',
+            skin_score_label:'⭐ Deine Punktzahl:',
+            skin_status_select:'Wähle einen Skin zum Ausrüsten',
+            skin_status_unlock:'🎉 {name} freigeschaltet!',
+            skin_status_not_enough:'❌ Nicht genug Punkte',
             skin_status_equip:'✅ {name} ausgerüstet!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ Punktzahl:',
-            skill_lasers:'🔵 Laser', skill_dmg:'🔴 6x Schaden', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ Team',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ Punktzahl:',
+            team_hp:'🛡️ Team-HP:',
+            team_ammo:'🔫 Team-Munition:',
+            skill_lasers:'🔵 Laser',
+            skill_dmg:'🔴 6x Schaden',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ Team',
             cooldown_ready:'✅ Bereit',
-            move_left:'⬅️ Links', move_right:'Rechts ➡️',
-            quit:'✕ Beenden', back:'← Zurück',
-            pause_title:'⏸️ PAUSE', pause_sub:'Spiel pausiert', resume_btn:'▶ Fortsetzen',
-            retry_title:'💀 Besiegt!', retry_desc:'Der Boss war zu stark! Versuche es erneut!', retry_btn:'🔄 Level wiederholen',
-            timeup_title:'⏱️ Zeit abgelaufen!', timeup_desc:'Du hast keine Zeit mehr!', timeup_score:'⭐ Punktzahl:', timeup_retry:'🔄 Erneut versuchen',
-            win_title_15:'🏆 DU BIST EINE LEGENDE!', win_subtitle_15:'Alle 15 Bosse besiegt!',
-            win_title_unlimited:'🔥 UNBEGRENZTER MODUS ABGESCHLOSSEN!', win_subtitle_unlimited:'Du hast {level} Level überlebt! Unglaublich!',
-            win_score:'⭐ Punktzahl:', win_restart:'🔄 Erneut spielen',
-            match_result_title_win:'🏆 SIEG!', match_result_title_loss:'💀 NIEDERLAGE!',
-            match_result_sub_win:'Du hast die KI übertroffen!', match_result_sub_loss:'Die KI war diesmal zu stark!',
-            match_result_hits:'💥 Deine Treffer:', match_result_ai_hits:'🤖 KI-Treffer:',
-            match_rematch:'🔄 Revanche', match_home:'🏠 Start'
+            move_left:'⬅️ Links',
+            move_right:'Rechts ➡️',
+            quit:'✕ Beenden',
+            back:'← Zurück',
+            pause_title:'⏸️ PAUSE',
+            pause_sub:'Spiel pausiert',
+            resume_btn:'▶ Fortsetzen',
+            retry_title:'💀 Besiegt!',
+            retry_desc:'Der Boss war zu stark! Versuche es erneut!',
+            retry_btn:'🔄 Level wiederholen',
+            timeup_title:'⏱️ Zeit abgelaufen!',
+            timeup_desc:'Du hast keine Zeit mehr!',
+            timeup_score:'⭐ Punktzahl:',
+            timeup_retry:'🔄 Erneut versuchen',
+            win_title_15:'🏆 DU BIST EINE LEGENDE!',
+            win_subtitle_15:'Alle 15 Bosse besiegt!',
+            win_title_unlimited:'🔥 UNBEGRENZTER MODUS ABGESCHLOSSEN!',
+            win_subtitle_unlimited:'Du hast {level} Level überlebt! Unglaublich!',
+            win_score:'⭐ Punktzahl:',
+            win_restart:'🔄 Erneut spielen',
+            match_result_title_win:'🏆 SIEG!',
+            match_result_title_loss:'💀 NIEDERLAGE!',
+            match_result_sub_win:'Du hast die KI übertroffen!',
+            match_result_sub_loss:'Die KI war diesmal zu stark!',
+            match_result_hits:'💥 Deine Treffer:',
+            match_result_ai_hits:'🤖 KI-Treffer:',
+            match_rematch:'🔄 Revanche',
+            match_home:'🏠 Start'
         },
         it: {
-            start_title:'🎯 Spara al Boss!', start_subtitle:'⚔️ Scegli la tua avventura! ⚔️',
-            start_play:'▶ Seleziona Modalità', start_skins:'🎨 Skin',
+            splash_by:'Gioco creato da:',
+            splash_loading:'Caricando la tua avventura...',
+            loading_title:'🎮 Caricamento...',
+            loading_sub:'Preparando la tua avventura',
+            start_title:'🎯 Spara al Boss!',
+            start_subtitle:'⚔️ Scegli la tua avventura! ⚔️',
+            start_play:'▶ Seleziona Modalità',
+            start_skins:'🎨 Skin',
             mode_title:'🎮 Seleziona Modalità di Gioco',
-            mode_15_label:'⚔️ 15 Livelli', mode_15_desc:'Sconfiggi tutti i 15 boss',
-            mode_unlimited_label:'🔥 Modalità Illimitata', mode_unlimited_desc:'Batti il tempo! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking —',
-            search_title:'🔍 Ricerca avversario...', search_sub:'Trova un rivale degno',
+            mode_15_label:'⚔️ 15 Livelli',
+            mode_15_desc:'Sconfiggi tutti i 15 boss',
+            mode_unlimited_label:'🔥 Modalità Illimitata',
+            mode_unlimited_desc:'Batti il tempo! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking',
+            mode_match_suffix:'Affronta un rivale IA!',
+            search_title:'🔍 Ricerca avversario...',
+            search_sub:'Trova un rivale degno',
             how_title:'⚔️ Come Giocare',
             how_instruction1:'🎯 Clicca sui proiettili nemici per distruggerli!',
             how_instruction2:'💙 Clicca ovunque per sparare al boss!',
@@ -525,34 +689,72 @@
             how_mode_info_unlimited:'🔥 Batti il tempo! Ogni livello aggiunge 370 secondi!',
             how_mode_info_matchmaking:'⚔️ Affronta un rivale IA! Il tuo Elo cambia con ogni partita. Usa le abilità per superare l\'IA!',
             how_start:'⚔️ Inizia Gioco',
-            skin_title:'🎨 Scegli la tua Skin', skin_subtitle:'Seleziona una skin per il tuo personaggio',
-            skin_score_label:'⭐ Il tuo Punteggio:', skin_status_select:'Seleziona una skin da equipaggiare',
-            skin_status_unlock:'🎉 {name} sbloccato!', skin_status_not_enough:'❌ Punti insufficienti',
+            skin_title:'🎨 Scegli la tua Skin',
+            skin_subtitle:'Seleziona una skin per il tuo personaggio',
+            skin_score_label:'⭐ Il tuo Punteggio:',
+            skin_status_select:'Seleziona una skin da equipaggiare',
+            skin_status_unlock:'🎉 {name} sbloccato!',
+            skin_status_not_enough:'❌ Punti insufficienti',
             skin_status_equip:'✅ {name} equipaggiato!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ Punteggio:',
-            skill_lasers:'🔵 Laser', skill_dmg:'🔴 x6 Danni', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ Squadra',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ Punteggio:',
+            team_hp:'🛡️ HP squadra:',
+            team_ammo:'🔫 Munizioni squadra:',
+            skill_lasers:'🔵 Laser',
+            skill_dmg:'🔴 x6 Danni',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ Squadra',
             cooldown_ready:'✅ Pronto',
-            move_left:'⬅️ Sinistra', move_right:'Destra ➡️',
-            quit:'✕ Esci', back:'← Indietro',
-            pause_title:'⏸️ PAUSA', pause_sub:'Gioco in pausa', resume_btn:'▶ Riprendi',
-            retry_title:'💀 Sconfitto!', retry_desc:'Il boss era troppo forte! Riprova!', retry_btn:'🔄 Riprova Livello',
-            timeup_title:'⏱️ Tempo Scaduto!', timeup_desc:'Hai finito il tempo!', timeup_score:'⭐ Punteggio:', timeup_retry:'🔄 Riprova',
-            win_title_15:'🏆 SEI UNA LEGGENDA!', win_subtitle_15:'Tutti i 15 boss sconfitti!',
-            win_title_unlimited:'🔥 MODALITÀ ILLIMITATA COMPLETATA!', win_subtitle_unlimited:'Hai sopravvissuto a {level} livelli! Incredibile!',
-            win_score:'⭐ Punteggio:', win_restart:'🔄 Gioca Ancora',
-            match_result_title_win:'🏆 VITTORIA!', match_result_title_loss:'💀 SCONFITTA!',
-            match_result_sub_win:'Hai superato l\'IA!', match_result_sub_loss:'L\'IA era troppo forte questa volta!',
-            match_result_hits:'💥 I tuoi colpi:', match_result_ai_hits:'🤖 Colpi IA:',
-            match_rematch:'🔄 Rivincita', match_home:'🏠 Casa'
+            move_left:'⬅️ Sinistra',
+            move_right:'Destra ➡️',
+            quit:'✕ Esci',
+            back:'← Indietro',
+            pause_title:'⏸️ PAUSA',
+            pause_sub:'Gioco in pausa',
+            resume_btn:'▶ Riprendi',
+            retry_title:'💀 Sconfitto!',
+            retry_desc:'Il boss era troppo forte! Riprova!',
+            retry_btn:'🔄 Riprova Livello',
+            timeup_title:'⏱️ Tempo Scaduto!',
+            timeup_desc:'Hai finito il tempo!',
+            timeup_score:'⭐ Punteggio:',
+            timeup_retry:'🔄 Riprova',
+            win_title_15:'🏆 SEI UNA LEGGENDA!',
+            win_subtitle_15:'Tutti i 15 boss sconfitti!',
+            win_title_unlimited:'🔥 MODALITÀ ILLIMITATA COMPLETATA!',
+            win_subtitle_unlimited:'Hai sopravvissuto a {level} livelli! Incredibile!',
+            win_score:'⭐ Punteggio:',
+            win_restart:'🔄 Gioca Ancora',
+            match_result_title_win:'🏆 VITTORIA!',
+            match_result_title_loss:'💀 SCONFITTA!',
+            match_result_sub_win:'Hai superato l\'IA!',
+            match_result_sub_loss:'L\'IA era troppo forte questa volta!',
+            match_result_hits:'💥 I tuoi colpi:',
+            match_result_ai_hits:'🤖 Colpi IA:',
+            match_rematch:'🔄 Rivincita',
+            match_home:'🏠 Casa'
         },
         pt: {
-            start_title:'🎯 Atire no Chefe!', start_subtitle:'⚔️ Escolha sua aventura! ⚔️',
-            start_play:'▶ Selecionar Modo', start_skins:'🎨 Skins',
+            splash_by:'Jogo criado por:',
+            splash_loading:'Carregando sua aventura...',
+            loading_title:'🎮 Carregando...',
+            loading_sub:'Preparando sua aventura',
+            start_title:'🎯 Atire no Chefe!',
+            start_subtitle:'⚔️ Escolha sua aventura! ⚔️',
+            start_play:'▶ Selecionar Modo',
+            start_skins:'🎨 Skins',
             mode_title:'🎮 Selecionar Modo de Jogo',
-            mode_15_label:'⚔️ 15 Níveis', mode_15_desc:'Derrote todos os 15 chefes',
-            mode_unlimited_label:'🔥 Modo Ilimitado', mode_unlimited_desc:'Vença o relógio! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking —',
-            search_title:'🔍 Procurando oponente...', search_sub:'Encontrando um rival à altura',
+            mode_15_label:'⚔️ 15 Níveis',
+            mode_15_desc:'Derrote todos os 15 chefes',
+            mode_unlimited_label:'🔥 Modo Ilimitado',
+            mode_unlimited_desc:'Vença o relógio! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking',
+            mode_match_suffix:'Enfrente um rival IA!',
+            search_title:'🔍 Procurando oponente...',
+            search_sub:'Encontrando um rival à altura',
             how_title:'⚔️ Como Jogar',
             how_instruction1:'🎯 Clique nos projéteis inimigos para destruí-los!',
             how_instruction2:'💙 Clique em qualquer lugar para atirar no chefe!',
@@ -567,34 +769,72 @@
             how_mode_info_unlimited:'🔥 Vença o relógio! Cada nível adiciona 370 segundos.',
             how_mode_info_matchmaking:'⚔️ Enfrente um rival IA! Seu Elo muda a cada partida. Use habilidades para superar a IA!',
             how_start:'⚔️ Iniciar Jogo',
-            skin_title:'🎨 Escolha sua Skin', skin_subtitle:'Selecione uma skin para seu personagem',
-            skin_score_label:'⭐ Sua pontuação:', skin_status_select:'Selecione uma skin para equipar',
-            skin_status_unlock:'🎉 {name} desbloqueada!', skin_status_not_enough:'❌ Pontos insuficientes',
+            skin_title:'🎨 Escolha sua Skin',
+            skin_subtitle:'Selecione uma skin para seu personagem',
+            skin_score_label:'⭐ Sua pontuação:',
+            skin_status_select:'Selecione uma skin para equipar',
+            skin_status_unlock:'🎉 {name} desbloqueada!',
+            skin_status_not_enough:'❌ Pontos insuficientes',
             skin_status_equip:'✅ {name} equipada!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ Pontuação:',
-            skill_lasers:'🔵 Lasers', skill_dmg:'🔴 x6 Dano', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ Equipe',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ Pontuação:',
+            team_hp:'🛡️ HP da equipe:',
+            team_ammo:'🔫 Munição da equipe:',
+            skill_lasers:'🔵 Lasers',
+            skill_dmg:'🔴 x6 Dano',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ Equipe',
             cooldown_ready:'✅ Pronto',
-            move_left:'⬅️ Esquerda', move_right:'Direita ➡️',
-            quit:'✕ Sair', back:'← Voltar',
-            pause_title:'⏸️ PAUSADO', pause_sub:'Jogo pausado', resume_btn:'▶ Retomar',
-            retry_title:'💀 Derrotado!', retry_desc:'O chefe era forte demais! Tente novamente!', retry_btn:'🔄 Repetir nível',
-            timeup_title:'⏱️ Tempo esgotado!', timeup_desc:'Você ficou sem tempo!', timeup_score:'⭐ Pontuação:', timeup_retry:'🔄 Tentar novamente',
-            win_title_15:'🏆 VOCÊ É UMA LENDA!', win_subtitle_15:'Todos os 15 chefes derrotados!',
-            win_title_unlimited:'🔥 MODO ILIMITADO COMPLETO!', win_subtitle_unlimited:'Você sobreviveu a {level} níveis! Incrível!',
-            win_score:'⭐ Pontuação:', win_restart:'🔄 Jogar novamente',
-            match_result_title_win:'🏆 VITÓRIA!', match_result_title_loss:'💀 DERROTA!',
-            match_result_sub_win:'Você superou a IA!', match_result_sub_loss:'A IA foi muito forte desta vez!',
-            match_result_hits:'💥 Seus acertos:', match_result_ai_hits:'🤖 Acertos IA:',
-            match_rematch:'🔄 Revanche', match_home:'🏠 Início'
+            move_left:'⬅️ Esquerda',
+            move_right:'Direita ➡️',
+            quit:'✕ Sair',
+            back:'← Voltar',
+            pause_title:'⏸️ PAUSADO',
+            pause_sub:'Jogo pausado',
+            resume_btn:'▶ Retomar',
+            retry_title:'💀 Derrotado!',
+            retry_desc:'O chefe era forte demais! Tente novamente!',
+            retry_btn:'🔄 Repetir nível',
+            timeup_title:'⏱️ Tempo esgotado!',
+            timeup_desc:'Você ficou sem tempo!',
+            timeup_score:'⭐ Pontuação:',
+            timeup_retry:'🔄 Tentar novamente',
+            win_title_15:'🏆 VOCÊ É UMA LENDA!',
+            win_subtitle_15:'Todos os 15 chefes derrotados!',
+            win_title_unlimited:'🔥 MODO ILIMITADO COMPLETO!',
+            win_subtitle_unlimited:'Você sobreviveu a {level} níveis! Incrível!',
+            win_score:'⭐ Pontuação:',
+            win_restart:'🔄 Jogar novamente',
+            match_result_title_win:'🏆 VITÓRIA!',
+            match_result_title_loss:'💀 DERROTA!',
+            match_result_sub_win:'Você superou a IA!',
+            match_result_sub_loss:'A IA foi muito forte desta vez!',
+            match_result_hits:'💥 Seus acertos:',
+            match_result_ai_hits:'🤖 Acertos IA:',
+            match_rematch:'🔄 Revanche',
+            match_home:'🏠 Início'
         },
         ru: {
-            start_title:'🎯 Застрели Босса!', start_subtitle:'⚔️ Выбери приключение! ⚔️',
-            start_play:'▶ Выбрать режим', start_skins:'🎨 Скины',
+            splash_by:'Игра создана:',
+            splash_loading:'Загрузка приключения...',
+            loading_title:'🎮 Загрузка...',
+            loading_sub:'Подготовка приключения',
+            start_title:'🎯 Застрели Босса!',
+            start_subtitle:'⚔️ Выбери приключение! ⚔️',
+            start_play:'▶ Выбрать режим',
+            start_skins:'🎨 Скины',
             mode_title:'🎮 Выбор режима игры',
-            mode_15_label:'⚔️ 15 Уровней', mode_15_desc:'Победи всех 15 боссов',
-            mode_unlimited_label:'🔥 Бесконечный режим', mode_unlimited_desc:'Обгони время! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking —',
-            search_title:'🔍 Поиск противника...', search_sub:'Поиск достойного соперника',
+            mode_15_label:'⚔️ 15 Уровней',
+            mode_15_desc:'Победи всех 15 боссов',
+            mode_unlimited_label:'🔥 Бесконечный режим',
+            mode_unlimited_desc:'Обгони время! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking',
+            mode_match_suffix:'Сразитесь с ИИ-соперником!',
+            search_title:'🔍 Поиск противника...',
+            search_sub:'Поиск достойного соперника',
             how_title:'⚔️ Как играть',
             how_instruction1:'🎯 Кликай по вражеским снарядам, чтобы уничтожить их!',
             how_instruction2:'💙 Кликай в любое место, чтобы стрелять в босса!',
@@ -609,34 +849,72 @@
             how_mode_info_unlimited:'🔥 Обгони время! Каждый уровень добавляет 370 секунд!',
             how_mode_info_matchmaking:'⚔️ Сразитесь с ИИ-соперником! Ваш Elo меняется с каждым матчем. Используйте навыки, чтобы превзойти ИИ!',
             how_start:'⚔️ Начать игру',
-            skin_title:'🎨 Выбери скин', skin_subtitle:'Выбери скин для персонажа',
-            skin_score_label:'⭐ Твой счёт:', skin_status_select:'Выбери скин',
-            skin_status_unlock:'🎉 {name} разблокирован!', skin_status_not_enough:'❌ Недостаточно очков',
+            skin_title:'🎨 Выбери скин',
+            skin_subtitle:'Выбери скин для персонажа',
+            skin_score_label:'⭐ Твой счёт:',
+            skin_status_select:'Выбери скин',
+            skin_status_unlock:'🎉 {name} разблокирован!',
+            skin_status_not_enough:'❌ Недостаточно очков',
             skin_status_equip:'✅ {name} надет!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ Счёт:',
-            skill_lasers:'🔵 Лазеры', skill_dmg:'🔴 x6 Урон', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ Команда',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ Счёт:',
+            team_hp:'🛡️ HP команды:',
+            team_ammo:'🔫 Патроны команды:',
+            skill_lasers:'🔵 Лазеры',
+            skill_dmg:'🔴 x6 Урон',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ Команда',
             cooldown_ready:'✅ Готово',
-            move_left:'⬅️ Влево', move_right:'Вправо ➡️',
-            quit:'✕ Выйти', back:'← Назад',
-            pause_title:'⏸️ ПАУЗА', pause_sub:'Игра на паузе', resume_btn:'▶ Продолжить',
-            retry_title:'💀 Поражение!', retry_desc:'Босс слишком силён! Попробуй снова!', retry_btn:'🔄 Повторить уровень',
-            timeup_title:'⏱️ Время вышло!', timeup_desc:'У тебя закончилось время!', timeup_score:'⭐ Счёт:', timeup_retry:'🔄 Попробовать снова',
-            win_title_15:'🏆 ТЫ ЛЕГЕНДА!', win_subtitle_15:'Все 15 боссов побеждены!',
-            win_title_unlimited:'🔥 БЕСКОНЕЧНЫЙ РЕЖИМ ПРОЙДЕН!', win_subtitle_unlimited:'Ты пережил {level} уровней! Потрясающе!',
-            win_score:'⭐ Счёт:', win_restart:'🔄 Играть снова',
-            match_result_title_win:'🏆 ПОБЕДА!', match_result_title_loss:'💀 ПОРАЖЕНИЕ!',
-            match_result_sub_win:'Вы превзошли ИИ!', match_result_sub_loss:'ИИ был слишком силён в этот раз!',
-            match_result_hits:'💥 Ваши попадания:', match_result_ai_hits:'🤖 Попадания ИИ:',
-            match_rematch:'🔄 Реванш', match_home:'🏠 Домой'
+            move_left:'⬅️ Влево',
+            move_right:'Вправо ➡️',
+            quit:'✕ Выйти',
+            back:'← Назад',
+            pause_title:'⏸️ ПАУЗА',
+            pause_sub:'Игра на паузе',
+            resume_btn:'▶ Продолжить',
+            retry_title:'💀 Поражение!',
+            retry_desc:'Босс слишком силён! Попробуй снова!',
+            retry_btn:'🔄 Повторить уровень',
+            timeup_title:'⏱️ Время вышло!',
+            timeup_desc:'У тебя закончилось время!',
+            timeup_score:'⭐ Счёт:',
+            timeup_retry:'🔄 Попробовать снова',
+            win_title_15:'🏆 ТЫ ЛЕГЕНДА!',
+            win_subtitle_15:'Все 15 боссов побеждены!',
+            win_title_unlimited:'🔥 БЕСКОНЕЧНЫЙ РЕЖИМ ПРОЙДЕН!',
+            win_subtitle_unlimited:'Ты пережил {level} уровней! Потрясающе!',
+            win_score:'⭐ Счёт:',
+            win_restart:'🔄 Играть снова',
+            match_result_title_win:'🏆 ПОБЕДА!',
+            match_result_title_loss:'💀 ПОРАЖЕНИЕ!',
+            match_result_sub_win:'Вы превзошли ИИ!',
+            match_result_sub_loss:'ИИ был слишком силён в этот раз!',
+            match_result_hits:'💥 Ваши попадания:',
+            match_result_ai_hits:'🤖 Попадания ИИ:',
+            match_rematch:'🔄 Реванш',
+            match_home:'🏠 Домой'
         },
         ja: {
-            start_title:'🎯 ボスを撃て!', start_subtitle:'⚔️ 冒険を選ぼう! ⚔️',
-            start_play:'▶ モード選択', start_skins:'🎨 スキン',
+            splash_by:'ゲーム制作：',
+            splash_loading:'冒険を読み込み中...',
+            loading_title:'🎮 ロード中...',
+            loading_sub:'冒険の準備中',
+            start_title:'🎯 ボスを撃て!',
+            start_subtitle:'⚔️ 冒険を選ぼう! ⚔️',
+            start_play:'▶ モード選択',
+            start_skins:'🎨 スキン',
             mode_title:'🎮 ゲームモード選択',
-            mode_15_label:'⚔️ 15レベル', mode_15_desc:'15体のボスを倒せ',
-            mode_unlimited_label:'🔥 無限モード', mode_unlimited_desc:'時間と勝負! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 マッチメイキング —',
-            search_title:'🔍 対戦相手を検索中...', search_sub:'ふさわしいライバルを探しています',
+            mode_15_label:'⚔️ 15レベル',
+            mode_15_desc:'15体のボスを倒せ',
+            mode_unlimited_label:'🔥 無限モード',
+            mode_unlimited_desc:'時間と勝負! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 マッチメイキング',
+            mode_match_suffix:'AIライバルと対戦!',
+            search_title:'🔍 対戦相手を検索中...',
+            search_sub:'ふさわしいライバルを探しています',
             how_title:'⚔️ 遊び方',
             how_instruction1:'🎯 敵の弾をクリックして破壊!',
             how_instruction2:'💙 どこでもクリックしてボスを撃て!',
@@ -651,34 +929,72 @@
             how_mode_info_unlimited:'🔥 時間と勝負! 各レベル370秒追加!',
             how_mode_info_matchmaking:'⚔️ AIライバルと対戦! Eloは試合ごとに変動します。スキルを使ってAIを上回ろう!',
             how_start:'⚔️ ゲーム開始',
-            skin_title:'🎨 スキン選択', skin_subtitle:'キャラクターのスキンを選択',
-            skin_score_label:'⭐ スコア:', skin_status_select:'装備するスキンを選択',
-            skin_status_unlock:'🎉 {name} 解除!', skin_status_not_enough:'❌ ポイント不足',
+            skin_title:'🎨 スキン選択',
+            skin_subtitle:'キャラクターのスキンを選択',
+            skin_score_label:'⭐ スコア:',
+            skin_status_select:'装備するスキンを選択',
+            skin_status_unlock:'🎉 {name} 解除!',
+            skin_status_not_enough:'❌ ポイント不足',
             skin_status_equip:'✅ {name} 装備!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ スコア:',
-            skill_lasers:'🔵 レーザー', skill_dmg:'🔴 6倍ダメ', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ チーム',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ スコア:',
+            team_hp:'🛡️ チームHP:',
+            team_ammo:'🔫 チーム弾薬:',
+            skill_lasers:'🔵 レーザー',
+            skill_dmg:'🔴 6倍ダメ',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ チーム',
             cooldown_ready:'✅ 準備完了',
-            move_left:'⬅️ 左', move_right:'右 ➡️',
-            quit:'✕ 終了', back:'← 戻る',
-            pause_title:'⏸️ 一時停止', pause_sub:'ゲーム停止中', resume_btn:'▶ 再開',
-            retry_title:'💀 敗北!', retry_desc:'ボスが強すぎた! 再挑戦!', retry_btn:'🔄 レベル再挑戦',
-            timeup_title:'⏱️ 時間切れ!', timeup_desc:'時間がなくなりました!', timeup_score:'⭐ スコア:', timeup_retry:'🔄 もう一度',
-            win_title_15:'🏆 あなたは伝説だ!', win_subtitle_15:'15体のボスを全て倒した!',
-            win_title_unlimited:'🔥 無限モード完了!', win_subtitle_unlimited:'{level}レベル生き残った! 驚異的!',
-            win_score:'⭐ スコア:', win_restart:'🔄 もう一度',
-            match_result_title_win:'🏆 勝利!', match_result_title_loss:'💀 敗北!',
-            match_result_sub_win:'AIライバルを打ち負かした!', match_result_sub_loss:'AIが強すぎた!',
-            match_result_hits:'💥 あなたのヒット:', match_result_ai_hits:'🤖 AIヒット:',
-            match_rematch:'🔄 再戦', match_home:'🏠 ホーム'
+            move_left:'⬅️ 左',
+            move_right:'右 ➡️',
+            quit:'✕ 終了',
+            back:'← 戻る',
+            pause_title:'⏸️ 一時停止',
+            pause_sub:'ゲーム停止中',
+            resume_btn:'▶ 再開',
+            retry_title:'💀 敗北!',
+            retry_desc:'ボスが強すぎた! 再挑戦!',
+            retry_btn:'🔄 レベル再挑戦',
+            timeup_title:'⏱️ 時間切れ!',
+            timeup_desc:'時間がなくなりました!',
+            timeup_score:'⭐ スコア:',
+            timeup_retry:'🔄 もう一度',
+            win_title_15:'🏆 あなたは伝説だ!',
+            win_subtitle_15:'15体のボスを全て倒した!',
+            win_title_unlimited:'🔥 無限モード完了!',
+            win_subtitle_unlimited:'{level}レベル生き残った! 驚異的!',
+            win_score:'⭐ スコア:',
+            win_restart:'🔄 もう一度',
+            match_result_title_win:'🏆 勝利!',
+            match_result_title_loss:'💀 敗北!',
+            match_result_sub_win:'AIライバルを打ち負かした!',
+            match_result_sub_loss:'AIが強すぎた!',
+            match_result_hits:'💥 あなたのヒット:',
+            match_result_ai_hits:'🤖 AIヒット:',
+            match_rematch:'🔄 再戦',
+            match_home:'🏠 ホーム'
         },
         ko: {
-            start_title:'🎯 보스를 쏴라!', start_subtitle:'⚔️ 모험을 선택하세요! ⚔️',
-            start_play:'▶ 모드 선택', start_skins:'🎨 스킨',
+            splash_by:'게임 제작:',
+            splash_loading:'모험을 불러오는 중...',
+            loading_title:'🎮 로딩 중...',
+            loading_sub:'모험 준비 중',
+            start_title:'🎯 보스를 쏴라!',
+            start_subtitle:'⚔️ 모험을 선택하세요! ⚔️',
+            start_play:'▶ 모드 선택',
+            start_skins:'🎨 스킨',
             mode_title:'🎮 게임 모드 선택',
-            mode_15_label:'⚔️ 15 레벨', mode_15_desc:'15명의 보스를 물리치세요',
-            mode_unlimited_label:'🔥 무한 모드', mode_unlimited_desc:'시간을 이겨라! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 매치메이킹 —',
-            search_title:'🔍 상대 검색 중...', search_sub:'적절한 라이벌 찾는 중',
+            mode_15_label:'⚔️ 15 레벨',
+            mode_15_desc:'15명의 보스를 물리치세요',
+            mode_unlimited_label:'🔥 무한 모드',
+            mode_unlimited_desc:'시간을 이겨라! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 매치메이킹',
+            mode_match_suffix:'AI 라이벌과 대결!',
+            search_title:'🔍 상대 검색 중...',
+            search_sub:'적절한 라이벌 찾는 중',
             how_title:'⚔️ 게임 방법',
             how_instruction1:'🎯 적 탄환을 클릭하여 파괴하세요!',
             how_instruction2:'💙 아무 곳이나 클릭하여 보스를 쏘세요!',
@@ -693,34 +1009,72 @@
             how_mode_info_unlimited:'🔥 시간을 이겨라! 각 레벨 370초 추가!',
             how_mode_info_matchmaking:'⚔️ AI 라이벌과 대결! 매 경기마다 Elo가 변합니다. 스킬을 사용하여 AI를 이겨내세요!',
             how_start:'⚔️ 게임 시작',
-            skin_title:'🎨 스킨 선택', skin_subtitle:'캐릭터 스킨을 선택하세요',
-            skin_score_label:'⭐ 점수:', skin_status_select:'장착할 스킨 선택',
-            skin_status_unlock:'🎉 {name} 해금!', skin_status_not_enough:'❌ 포인트 부족',
+            skin_title:'🎨 스킨 선택',
+            skin_subtitle:'캐릭터 스킨을 선택하세요',
+            skin_score_label:'⭐ 점수:',
+            skin_status_select:'장착할 스킨 선택',
+            skin_status_unlock:'🎉 {name} 해금!',
+            skin_status_not_enough:'❌ 포인트 부족',
             skin_status_equip:'✅ {name} 장착!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ 점수:',
-            skill_lasers:'🔵 레이저', skill_dmg:'🔴 6배 데미지', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ 팀',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ 점수:',
+            team_hp:'🛡️ 팀 HP:',
+            team_ammo:'🔫 팀 탄약:',
+            skill_lasers:'🔵 레이저',
+            skill_dmg:'🔴 6배 데미지',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ 팀',
             cooldown_ready:'✅ 준비됨',
-            move_left:'⬅️ 왼쪽', move_right:'오른쪽 ➡️',
-            quit:'✕ 종료', back:'← 뒤로',
-            pause_title:'⏸️ 일시정지', pause_sub:'게임 일시정지', resume_btn:'▶ 계속',
-            retry_title:'💀 패배!', retry_desc:'보스가 너무 강했습니다! 다시 시도!', retry_btn:'🔄 레벨 재도전',
-            timeup_title:'⏱️ 시간 초과!', timeup_desc:'시간이 다 되었습니다!', timeup_score:'⭐ 점수:', timeup_retry:'🔄 다시 시도',
-            win_title_15:'🏆 당신은 전설입니다!', win_subtitle_15:'15명의 보스를 모두 물리쳤습니다!',
-            win_title_unlimited:'🔥 무한 모드 완료!', win_subtitle_unlimited:'{level}레벨 생존! 놀랍습니다!',
-            win_score:'⭐ 점수:', win_restart:'🔄 다시 플레이',
-            match_result_title_win:'🏆 승리!', match_result_title_loss:'💀 패배!',
-            match_result_sub_win:'AI를 능가했습니다!', match_result_sub_loss:'이번에는 AI가 너무 강했습니다!',
-            match_result_hits:'💥 당신의 히트:', match_result_ai_hits:'🤖 AI 히트:',
-            match_rematch:'🔄 재대결', match_home:'🏠 홈'
+            move_left:'⬅️ 왼쪽',
+            move_right:'오른쪽 ➡️',
+            quit:'✕ 종료',
+            back:'← 뒤로',
+            pause_title:'⏸️ 일시정지',
+            pause_sub:'게임 일시정지',
+            resume_btn:'▶ 계속',
+            retry_title:'💀 패배!',
+            retry_desc:'보스가 너무 강했습니다! 다시 시도!',
+            retry_btn:'🔄 레벨 재도전',
+            timeup_title:'⏱️ 시간 초과!',
+            timeup_desc:'시간이 다 되었습니다!',
+            timeup_score:'⭐ 점수:',
+            timeup_retry:'🔄 다시 시도',
+            win_title_15:'🏆 당신은 전설입니다!',
+            win_subtitle_15:'15명의 보스를 모두 물리쳤습니다!',
+            win_title_unlimited:'🔥 무한 모드 완료!',
+            win_subtitle_unlimited:'{level}레벨 생존! 놀랍습니다!',
+            win_score:'⭐ 점수:',
+            win_restart:'🔄 다시 플레이',
+            match_result_title_win:'🏆 승리!',
+            match_result_title_loss:'💀 패배!',
+            match_result_sub_win:'AI를 능가했습니다!',
+            match_result_sub_loss:'이번에는 AI가 너무 강했습니다!',
+            match_result_hits:'💥 당신의 히트:',
+            match_result_ai_hits:'🤖 AI 히트:',
+            match_rematch:'🔄 재대결',
+            match_home:'🏠 홈'
         },
         zh: {
-            start_title:'🎯 射击老板!', start_subtitle:'⚔️ 选择你的冒险! ⚔️',
-            start_play:'▶ 选择模式', start_skins:'🎨 皮肤',
+            splash_by:'游戏制作：',
+            splash_loading:'加载你的冒险...',
+            loading_title:'🎮 加载中...',
+            loading_sub:'准备你的冒险',
+            start_title:'🎯 射击老板!',
+            start_subtitle:'⚔️ 选择你的冒险! ⚔️',
+            start_play:'▶ 选择模式',
+            start_skins:'🎨 皮肤',
             mode_title:'🎮 选择游戏模式',
-            mode_15_label:'⚔️ 15关', mode_15_desc:'击败所有15个老板',
-            mode_unlimited_label:'🔥 无限模式', mode_unlimited_desc:'争分夺秒! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 匹配 —',
-            search_title:'🔍 搜索对手...', search_sub:'寻找合适的对手',
+            mode_15_label:'⚔️ 15关',
+            mode_15_desc:'击败所有15个老板',
+            mode_unlimited_label:'🔥 无限模式',
+            mode_unlimited_desc:'争分夺秒! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 匹配',
+            mode_match_suffix:'与AI对手对战!',
+            search_title:'🔍 搜索对手...',
+            search_sub:'寻找合适的对手',
             how_title:'⚔️ 游戏玩法',
             how_instruction1:'🎯 点击敌方弹幕将其摧毁!',
             how_instruction2:'💙 点击任意位置射击老板!',
@@ -735,34 +1089,72 @@
             how_mode_info_unlimited:'🔥 争分夺秒! 每关增加370秒!',
             how_mode_info_matchmaking:'⚔️ 与AI对手对战! 每场比赛Elo都会变化。使用技能击败AI!',
             how_start:'⚔️ 开始游戏',
-            skin_title:'🎨 选择你的皮肤', skin_subtitle:'为你的角色选择皮肤',
-            skin_score_label:'⭐ 你的分数:', skin_status_select:'选择要装备的皮肤',
-            skin_status_unlock:'🎉 {name} 已解锁!', skin_status_not_enough:'❌ 积分不足',
+            skin_title:'🎨 选择你的皮肤',
+            skin_subtitle:'为你的角色选择皮肤',
+            skin_score_label:'⭐ 你的分数:',
+            skin_status_select:'选择要装备的皮肤',
+            skin_status_unlock:'🎉 {name} 已解锁!',
+            skin_status_not_enough:'❌ 积分不足',
             skin_status_equip:'✅ {name} 已装备!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ 分数:',
-            skill_lasers:'🔵 激光', skill_dmg:'🔴 6倍伤害', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ 团队',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ 分数:',
+            team_hp:'🛡️ 团队生命:',
+            team_ammo:'🔫 团队弹药:',
+            skill_lasers:'🔵 激光',
+            skill_dmg:'🔴 6倍伤害',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ 团队',
             cooldown_ready:'✅ 就绪',
-            move_left:'⬅️ 左', move_right:'右 ➡️',
-            quit:'✕ 退出', back:'← 返回',
-            pause_title:'⏸️ 暂停', pause_sub:'游戏已暂停', resume_btn:'▶ 继续',
-            retry_title:'💀 失败!', retry_desc:'老板太强了! 再试一次!', retry_btn:'🔄 重试关卡',
-            timeup_title:'⏱️ 时间到!', timeup_desc:'你的时间用完了!', timeup_score:'⭐ 分数:', timeup_retry:'🔄 再试一次',
-            win_title_15:'🏆 你是传奇!', win_subtitle_15:'所有15个老板都被击败!',
-            win_title_unlimited:'🔥 无限模式完成!', win_subtitle_unlimited:'你存活了{level}关! 太棒了!',
-            win_score:'⭐ 分数:', win_restart:'🔄 再玩一次',
-            match_result_title_win:'🏆 胜利!', match_result_title_loss:'💀 失败!',
-            match_result_sub_win:'你击败了AI对手!', match_result_sub_loss:'这次AI太强了!',
-            match_result_hits:'💥 你的命中:', match_result_ai_hits:'🤖 AI命中:',
-            match_rematch:'🔄 再战', match_home:'🏠 首页'
+            move_left:'⬅️ 左',
+            move_right:'右 ➡️',
+            quit:'✕ 退出',
+            back:'← 返回',
+            pause_title:'⏸️ 暂停',
+            pause_sub:'游戏已暂停',
+            resume_btn:'▶ 继续',
+            retry_title:'💀 失败!',
+            retry_desc:'老板太强了! 再试一次!',
+            retry_btn:'🔄 重试关卡',
+            timeup_title:'⏱️ 时间到!',
+            timeup_desc:'你的时间用完了!',
+            timeup_score:'⭐ 分数:',
+            timeup_retry:'🔄 再试一次',
+            win_title_15:'🏆 你是传奇!',
+            win_subtitle_15:'所有15个老板都被击败!',
+            win_title_unlimited:'🔥 无限模式完成!',
+            win_subtitle_unlimited:'你存活了{level}关! 太棒了!',
+            win_score:'⭐ 分数:',
+            win_restart:'🔄 再玩一次',
+            match_result_title_win:'🏆 胜利!',
+            match_result_title_loss:'💀 失败!',
+            match_result_sub_win:'你击败了AI对手!',
+            match_result_sub_loss:'这次AI太强了!',
+            match_result_hits:'💥 你的命中:',
+            match_result_ai_hits:'🤖 AI命中:',
+            match_rematch:'🔄 再战',
+            match_home:'🏠 首页'
         },
         ar: {
-            start_title:'🎯 أطلق النار على الزعيم!', start_subtitle:'⚔️ اختر مغامرتك! ⚔️',
-            start_play:'▶ اختر الوضع', start_skins:'🎨 الأشكال',
+            splash_by:'صنع اللعبة:',
+            splash_loading:'تحميل مغامرتك...',
+            loading_title:'🎮 جاري التحميل...',
+            loading_sub:'تحضير مغامرتك',
+            start_title:'🎯 أطلق النار على الزعيم!',
+            start_subtitle:'⚔️ اختر مغامرتك! ⚔️',
+            start_play:'▶ اختر الوضع',
+            start_skins:'🎨 الأشكال',
             mode_title:'🎮 اختر وضع اللعبة',
-            mode_15_label:'⚔️ 15 مستوى', mode_15_desc:'اهزم جميع الـ 15 زعيماً',
-            mode_unlimited_label:'🔥 وضع غير محدود', mode_unlimited_desc:'تغلب على الوقت! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 مباراة —',
-            search_title:'🔍 البحث عن خصم...', search_sub:'البحث عن منافس جدير',
+            mode_15_label:'⚔️ 15 مستوى',
+            mode_15_desc:'اهزم جميع الـ 15 زعيماً',
+            mode_unlimited_label:'🔥 وضع غير محدود',
+            mode_unlimited_desc:'تغلب على الوقت! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 مباراة',
+            mode_match_suffix:'واجه خصمًا ذكاءً اصطناعيًا!',
+            search_title:'🔍 البحث عن خصم...',
+            search_sub:'البحث عن منافس جدير',
             how_title:'⚔️ كيفية اللعب',
             how_instruction1:'🎯 انقر على قذائف العدو لتدميرها!',
             how_instruction2:'💙 انقر في أي مكان لإطلاق النار على الزعيم!',
@@ -777,34 +1169,72 @@
             how_mode_info_unlimited:'🔥 تغلب على الوقت! كل مستوى يضيف 370 ثانية!',
             how_mode_info_matchmaking:'⚔️ واجه خصمًا ذكاءً اصطناعيًا! يتغير Elo الخاص بك مع كل مباراة. استخدم المهارات لتتفوق على الذكاء الاصطناعي!',
             how_start:'⚔️ ابدأ اللعبة',
-            skin_title:'🎨 اختر شكلك', skin_subtitle:'اختر شكلاً لشخصيتك',
-            skin_score_label:'⭐ نتيجتك:', skin_status_select:'اختر شكلاً لتجهيزه',
-            skin_status_unlock:'🎉 {name} تم فتحه!', skin_status_not_enough:'❌ نقاط غير كافية',
+            skin_title:'🎨 اختر شكلك',
+            skin_subtitle:'اختر شكلاً لشخصيتك',
+            skin_score_label:'⭐ نتيجتك:',
+            skin_status_select:'اختر شكلاً لتجهيزه',
+            skin_status_unlock:'🎉 {name} تم فتحه!',
+            skin_status_not_enough:'❌ نقاط غير كافية',
             skin_status_equip:'✅ {name} تم تجهيزه!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ النتيجة:',
-            skill_lasers:'🔵 ليزر', skill_dmg:'🔴 ضرر x6', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ فريق',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ النتيجة:',
+            team_hp:'🛡️ صحة الفريق:',
+            team_ammo:'🔫 ذخيرة الفريق:',
+            skill_lasers:'🔵 ليزر',
+            skill_dmg:'🔴 ضرر x6',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ فريق',
             cooldown_ready:'✅ جاهز',
-            move_left:'⬅️ يسار', move_right:'يمين ➡️',
-            quit:'✕ خروج', back:'← رجوع',
-            pause_title:'⏸️ إيقاف مؤقت', pause_sub:'اللعبة متوقفة', resume_btn:'▶ استئناف',
-            retry_title:'💀 هُزمت!', retry_desc:'الزعيم كان قوياً جداً! حاول مرة أخرى!', retry_btn:'🔄 أعد المحاولة',
-            timeup_title:'⏱️ انتهى الوقت!', timeup_desc:'نفد وقتك!', timeup_score:'⭐ النتيجة:', timeup_retry:'🔄 حاول مرة أخرى',
-            win_title_15:'🏆 أنت أسطورة!', win_subtitle_15:'تم هزيمة جميع الـ 15 زعيماً!',
-            win_title_unlimited:'🔥 اكتمل الوضع غير المحدود!', win_subtitle_unlimited:'لقد نجوت من {level} مستوى! مذهل!',
-            win_score:'⭐ النتيجة:', win_restart:'🔄 العب مرة أخرى',
-            match_result_title_win:'🏆 انتصار!', match_result_title_loss:'💀 هزيمة!',
-            match_result_sub_win:'لقد تفوقت على الذكاء الاصطناعي!', match_result_sub_loss:'كان الذكاء الاصطناعي قويًا جدًا هذه المرة!',
-            match_result_hits:'💥 ضرباتك:', match_result_ai_hits:'🤖 ضربات الذكاء الاصطناعي:',
-            match_rematch:'🔄 مباراة العودة', match_home:'🏠 الرئيسية'
+            move_left:'⬅️ يسار',
+            move_right:'يمين ➡️',
+            quit:'✕ خروج',
+            back:'← رجوع',
+            pause_title:'⏸️ إيقاف مؤقت',
+            pause_sub:'اللعبة متوقفة',
+            resume_btn:'▶ استئناف',
+            retry_title:'💀 هُزمت!',
+            retry_desc:'الزعيم كان قوياً جداً! حاول مرة أخرى!',
+            retry_btn:'🔄 أعد المحاولة',
+            timeup_title:'⏱️ انتهى الوقت!',
+            timeup_desc:'نفد وقتك!',
+            timeup_score:'⭐ النتيجة:',
+            timeup_retry:'🔄 حاول مرة أخرى',
+            win_title_15:'🏆 أنت أسطورة!',
+            win_subtitle_15:'تم هزيمة جميع الـ 15 زعيماً!',
+            win_title_unlimited:'🔥 اكتمل الوضع غير المحدود!',
+            win_subtitle_unlimited:'لقد نجوت من {level} مستوى! مذهل!',
+            win_score:'⭐ النتيجة:',
+            win_restart:'🔄 العب مرة أخرى',
+            match_result_title_win:'🏆 انتصار!',
+            match_result_title_loss:'💀 هزيمة!',
+            match_result_sub_win:'لقد تفوقت على الذكاء الاصطناعي!',
+            match_result_sub_loss:'كان الذكاء الاصطناعي قويًا جدًا هذه المرة!',
+            match_result_hits:'💥 ضرباتك:',
+            match_result_ai_hits:'🤖 ضربات الذكاء الاصطناعي:',
+            match_rematch:'🔄 مباراة العودة',
+            match_home:'🏠 الرئيسية'
         },
         hi: {
-            start_title:'🎯 बॉस को गोली मारो!', start_subtitle:'⚔️ अपना साहसिक चुनें! ⚔️',
-            start_play:'▶ मोड चुनें', start_skins:'🎨 स्किन्स',
+            splash_by:'गेम निर्माता:',
+            splash_loading:'आपका साहसिक लोड हो रहा है...',
+            loading_title:'🎮 लोड हो रहा है...',
+            loading_sub:'आपका साहसिक तैयार किया जा रहा है',
+            start_title:'🎯 बॉस को गोली मारो!',
+            start_subtitle:'⚔️ अपना साहसिक चुनें! ⚔️',
+            start_play:'▶ मोड चुनें',
+            start_skins:'🎨 स्किन्स',
             mode_title:'🎮 गेम मोड चुनें',
-            mode_15_label:'⚔️ 15 स्तर', mode_15_desc:'सभी 15 बॉस को हराएं',
-            mode_unlimited_label:'🔥 असीमित मोड', mode_unlimited_desc:'समय को हराएं! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 मैचमेकिंग —',
-            search_title:'🔍 प्रतिद्वंद्वी खोज रहे हैं...', search_sub:'एक योग्य प्रतिद्वंद्वी ढूंढ रहे हैं',
+            mode_15_label:'⚔️ 15 स्तर',
+            mode_15_desc:'सभी 15 बॉस को हराएं',
+            mode_unlimited_label:'🔥 असीमित मोड',
+            mode_unlimited_desc:'समय को हराएं! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 मैचमेकिंग',
+            mode_match_suffix:'AI प्रतिद्वंद्वी से लड़ें!',
+            search_title:'🔍 प्रतिद्वंद्वी खोज रहे हैं...',
+            search_sub:'एक योग्य प्रतिद्वंद्वी ढूंढ रहे हैं',
             how_title:'⚔️ कैसे खेलें',
             how_instruction1:'🎯 दुश्मन के प्रोजेक्टाइल पर क्लिक करके उन्हें नष्ट करें!',
             how_instruction2:'💙 बॉस पर गोली चलाने के लिए कहीं भी क्लिक करें!',
@@ -819,34 +1249,72 @@
             how_mode_info_unlimited:'🔥 समय को हराएं! प्रत्येक स्तर 370 सेकंड जोड़ता है!',
             how_mode_info_matchmaking:'⚔️ AI प्रतिद्वंद्वी से लड़ें! हर मैच के साथ आपका Elo बदलता है। AI को हराने के लिए कौशल का उपयोग करें!',
             how_start:'⚔️ खेल शुरू करें',
-            skin_title:'🎨 अपनी स्किन चुनें', skin_subtitle:'अपने चरित्र के लिए एक स्किन चुनें',
-            skin_score_label:'⭐ आपका स्कोर:', skin_status_select:'लैस करने के लिए स्किन चुनें',
-            skin_status_unlock:'🎉 {name} अनलॉक!', skin_status_not_enough:'❌ पर्याप्त अंक नहीं',
+            skin_title:'🎨 अपनी स्किन चुनें',
+            skin_subtitle:'अपने चरित्र के लिए एक स्किन चुनें',
+            skin_score_label:'⭐ आपका स्कोर:',
+            skin_status_select:'लैस करने के लिए स्किन चुनें',
+            skin_status_unlock:'🎉 {name} अनलॉक!',
+            skin_status_not_enough:'❌ पर्याप्त अंक नहीं',
             skin_status_equip:'✅ {name} लैस!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ स्कोर:',
-            skill_lasers:'🔵 लेजर', skill_dmg:'🔴 6x क्षति', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ टीम',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ स्कोर:',
+            team_hp:'🛡️ टीम HP:',
+            team_ammo:'🔫 टीम गोला-बारूद:',
+            skill_lasers:'🔵 लेजर',
+            skill_dmg:'🔴 6x क्षति',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ टीम',
             cooldown_ready:'✅ तैयार',
-            move_left:'⬅️ बाएं', move_right:'दाएं ➡️',
-            quit:'✕ छोड़ें', back:'← वापस',
-            pause_title:'⏸️ रुका हुआ', pause_sub:'खेल रुका हुआ है', resume_btn:'▶ फिर शुरू करें',
-            retry_title:'💀 हार गए!', retry_desc:'बॉस बहुत मजबूत था! पुनः प्रयास करें!', retry_btn:'🔄 स्तर पुनः प्रयास करें',
-            timeup_title:'⏱️ समय समाप्त!', timeup_desc:'आपका समय समाप्त हो गया!', timeup_score:'⭐ स्कोर:', timeup_retry:'🔄 पुनः प्रयास करें',
-            win_title_15:'🏆 आप एक किंवदंती हैं!', win_subtitle_15:'सभी 15 बॉस हरा दिए गए!',
-            win_title_unlimited:'🔥 असीमित मोड पूरा!', win_subtitle_unlimited:'आप {level} स्तरों तक जीवित रहे! अद्भुत!',
-            win_score:'⭐ स्कोर:', win_restart:'🔄 फिर से खेलें',
-            match_result_title_win:'🏆 जीत!', match_result_title_loss:'💀 हार!',
-            match_result_sub_win:'आपने AI को हरा दिया!', match_result_sub_loss:'इस बार AI बहुत मजबूत था!',
-            match_result_hits:'💥 आपकी हिट्स:', match_result_ai_hits:'🤖 AI हिट्स:',
-            match_rematch:'🔄 पुनर्मैच', match_home:'🏠 होम'
+            move_left:'⬅️ बाएं',
+            move_right:'दाएं ➡️',
+            quit:'✕ छोड़ें',
+            back:'← वापस',
+            pause_title:'⏸️ रुका हुआ',
+            pause_sub:'खेल रुका हुआ है',
+            resume_btn:'▶ फिर शुरू करें',
+            retry_title:'💀 हार गए!',
+            retry_desc:'बॉस बहुत मजबूत था! पुनः प्रयास करें!',
+            retry_btn:'🔄 स्तर पुनः प्रयास करें',
+            timeup_title:'⏱️ समय समाप्त!',
+            timeup_desc:'आपका समय समाप्त हो गया!',
+            timeup_score:'⭐ स्कोर:',
+            timeup_retry:'🔄 पुनः प्रयास करें',
+            win_title_15:'🏆 आप एक किंवदंती हैं!',
+            win_subtitle_15:'सभी 15 बॉस हरा दिए गए!',
+            win_title_unlimited:'🔥 असीमित मोड पूरा!',
+            win_subtitle_unlimited:'आप {level} स्तरों तक जीवित रहे! अद्भुत!',
+            win_score:'⭐ स्कोर:',
+            win_restart:'🔄 फिर से खेलें',
+            match_result_title_win:'🏆 जीत!',
+            match_result_title_loss:'💀 हार!',
+            match_result_sub_win:'आपने AI को हरा दिया!',
+            match_result_sub_loss:'इस बार AI बहुत मजबूत था!',
+            match_result_hits:'💥 आपकी हिट्स:',
+            match_result_ai_hits:'🤖 AI हिट्स:',
+            match_rematch:'🔄 पुनर्मैच',
+            match_home:'🏠 होम'
         },
         nl: {
-            start_title:'🎯 Schiet de Baas!', start_subtitle:'⚔️ Kies je avontuur! ⚔️',
-            start_play:'▶ Selecteer modus', start_skins:'🎨 Skins',
+            splash_by:'Spel gemaakt door:',
+            splash_loading:'Je avontuur laden...',
+            loading_title:'🎮 Laden...',
+            loading_sub:'Je avontuur voorbereiden',
+            start_title:'🎯 Schiet de Baas!',
+            start_subtitle:'⚔️ Kies je avontuur! ⚔️',
+            start_play:'▶ Selecteer modus',
+            start_skins:'🎨 Skins',
             mode_title:'🎮 Selecteer spelmodus',
-            mode_15_label:'⚔️ 15 Levels', mode_15_desc:'Versla alle 15 bazen',
-            mode_unlimited_label:'🔥 Onbeperkte modus', mode_unlimited_desc:'Versla de klok! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking —',
-            search_title:'🔍 Zoeken naar tegenstander...', search_sub:'Een waardige rivaal vinden',
+            mode_15_label:'⚔️ 15 Levels',
+            mode_15_desc:'Versla alle 15 bazen',
+            mode_unlimited_label:'🔥 Onbeperkte modus',
+            mode_unlimited_desc:'Versla de klok! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking',
+            mode_match_suffix:'Strijd tegen een AI-rivaal!',
+            search_title:'🔍 Zoeken naar tegenstander...',
+            search_sub:'Een waardige rivaal vinden',
             how_title:'⚔️ Hoe te spelen',
             how_instruction1:'🎯 Klik op vijandelijke projectielen om ze te vernietigen!',
             how_instruction2:'💙 Klik ergens om op de baas te schieten!',
@@ -861,34 +1329,72 @@
             how_mode_info_unlimited:'🔥 Versla de klok! Elk level voegt 370 seconden toe!',
             how_mode_info_matchmaking:'⚔️ Strijd tegen een AI-rivaal! Je Elo verandert met elke wedstrijd. Gebruik vaardigheden om de AI te overtreffen!',
             how_start:'⚔️ Start spel',
-            skin_title:'🎨 Kies je skin', skin_subtitle:'Selecteer een skin voor je personage',
-            skin_score_label:'⭐ Jouw score:', skin_status_select:'Selecteer een skin om uit te rusten',
-            skin_status_unlock:'🎉 {name} ontgrendeld!', skin_status_not_enough:'❌ Niet genoeg punten',
+            skin_title:'🎨 Kies je skin',
+            skin_subtitle:'Selecteer een skin voor je personage',
+            skin_score_label:'⭐ Jouw score:',
+            skin_status_select:'Selecteer een skin om uit te rusten',
+            skin_status_unlock:'🎉 {name} ontgrendeld!',
+            skin_status_not_enough:'❌ Niet genoeg punten',
             skin_status_equip:'✅ {name} uitgerust!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ Score:',
-            skill_lasers:'🔵 Lasers', skill_dmg:'🔴 6x Schade', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ Team',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ Score:',
+            team_hp:'🛡️ Team HP:',
+            team_ammo:'🔫 Team munitie:',
+            skill_lasers:'🔵 Lasers',
+            skill_dmg:'🔴 6x Schade',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ Team',
             cooldown_ready:'✅ Klaar',
-            move_left:'⬅️ Links', move_right:'Rechts ➡️',
-            quit:'✕ Stoppen', back:'← Terug',
-            pause_title:'⏸️ GEPAUZEERD', pause_sub:'Spel is gepauzeerd', resume_btn:'▶ Hervatten',
-            retry_title:'💀 Verslagen!', retry_desc:'De baas was te sterk! Probeer opnieuw!', retry_btn:'🔄 Level opnieuw',
-            timeup_title:'⏱️ Tijd is om!', timeup_desc:'Je tijd is op!', timeup_score:'⭐ Score:', timeup_retry:'🔄 Probeer opnieuw',
-            win_title_15:'🏆 JE BENT EEN LEGENDE!', win_subtitle_15:'Alle 15 bazen verslagen!',
-            win_title_unlimited:'🔥 ONBEPERKTE MODUS VOLTOOID!', win_subtitle_unlimited:'Je hebt {level} levels overleefd! Geweldig!',
-            win_score:'⭐ Score:', win_restart:'🔄 Opnieuw spelen',
-            match_result_title_win:'🏆 OVERWINNING!', match_result_title_loss:'💀 NEDERLAAG!',
-            match_result_sub_win:'Je hebt de AI overtroffen!', match_result_sub_loss:'De AI was deze keer te sterk!',
-            match_result_hits:'💥 Jouw treffers:', match_result_ai_hits:'🤖 AI-treffers:',
-            match_rematch:'🔄 Rematch', match_home:'🏠 Home'
+            move_left:'⬅️ Links',
+            move_right:'Rechts ➡️',
+            quit:'✕ Stoppen',
+            back:'← Terug',
+            pause_title:'⏸️ GEPAUZEERD',
+            pause_sub:'Spel is gepauzeerd',
+            resume_btn:'▶ Hervatten',
+            retry_title:'💀 Verslagen!',
+            retry_desc:'De baas was te sterk! Probeer opnieuw!',
+            retry_btn:'🔄 Level opnieuw',
+            timeup_title:'⏱️ Tijd is om!',
+            timeup_desc:'Je tijd is op!',
+            timeup_score:'⭐ Score:',
+            timeup_retry:'🔄 Probeer opnieuw',
+            win_title_15:'🏆 JE BENT EEN LEGENDE!',
+            win_subtitle_15:'Alle 15 bazen verslagen!',
+            win_title_unlimited:'🔥 ONBEPERKTE MODUS VOLTOOID!',
+            win_subtitle_unlimited:'Je hebt {level} levels overleefd! Geweldig!',
+            win_score:'⭐ Score:',
+            win_restart:'🔄 Opnieuw spelen',
+            match_result_title_win:'🏆 OVERWINNING!',
+            match_result_title_loss:'💀 NEDERLAAG!',
+            match_result_sub_win:'Je hebt de AI overtroffen!',
+            match_result_sub_loss:'De AI was deze keer te sterk!',
+            match_result_hits:'💥 Jouw treffers:',
+            match_result_ai_hits:'🤖 AI-treffers:',
+            match_rematch:'🔄 Rematch',
+            match_home:'🏠 Home'
         },
         pl: {
-            start_title:'🎯 Zastrzel Szefa!', start_subtitle:'⚔️ Wybierz przygodę! ⚔️',
-            start_play:'▶ Wybierz tryb', start_skins:'🎨 Skórki',
+            splash_by:'Gra stworzona przez:',
+            splash_loading:'Ładowanie przygody...',
+            loading_title:'🎮 Ładowanie...',
+            loading_sub:'Przygotowywanie przygody',
+            start_title:'🎯 Zastrzel Szefa!',
+            start_subtitle:'⚔️ Wybierz przygodę! ⚔️',
+            start_play:'▶ Wybierz tryb',
+            start_skins:'🎨 Skórki',
             mode_title:'🎮 Wybierz tryb gry',
-            mode_15_label:'⚔️ 15 Poziomów', mode_15_desc:'Pokonaj wszystkich 15 szefów',
-            mode_unlimited_label:'🔥 Tryb nieograniczony', mode_unlimited_desc:'Pokonaj czas! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking —',
-            search_title:'🔍 Szukanie przeciwnika...', search_sub:'Znajdź godnego rywala',
+            mode_15_label:'⚔️ 15 Poziomów',
+            mode_15_desc:'Pokonaj wszystkich 15 szefów',
+            mode_unlimited_label:'🔥 Tryb nieograniczony',
+            mode_unlimited_desc:'Pokonaj czas! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 Matchmaking',
+            mode_match_suffix:'Zmierz się z rywalem AI!',
+            search_title:'🔍 Szukanie przeciwnika...',
+            search_sub:'Znajdź godnego rywala',
             how_title:'⚔️ Jak grać',
             how_instruction1:'🎯 Kliknij na wrogie pociski, aby je zniszczyć!',
             how_instruction2:'💙 Kliknij gdziekolwiek, aby strzelić do szefa!',
@@ -903,34 +1409,72 @@
             how_mode_info_unlimited:'🔥 Pokonaj czas! Każdy poziom dodaje 370 sekund!',
             how_mode_info_matchmaking:'⚔️ Zmierz się z rywalem AI! Twój Elo zmienia się z każdym meczem. Użyj umiejętności, aby pokonać AI!',
             how_start:'⚔️ Rozpocznij grę',
-            skin_title:'🎨 Wybierz skórkę', skin_subtitle:'Wybierz skórkę dla swojej postaci',
-            skin_score_label:'⭐ Twój wynik:', skin_status_select:'Wybierz skórkę do założenia',
-            skin_status_unlock:'🎉 {name} odblokowana!', skin_status_not_enough:'❌ Za mało punktów',
+            skin_title:'🎨 Wybierz skórkę',
+            skin_subtitle:'Wybierz skórkę dla swojej postaci',
+            skin_score_label:'⭐ Twój wynik:',
+            skin_status_select:'Wybierz skórkę do założenia',
+            skin_status_unlock:'🎉 {name} odblokowana!',
+            skin_status_not_enough:'❌ Za mało punktów',
             skin_status_equip:'✅ {name} założona!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ Wynik:',
-            skill_lasers:'🔵 Lasery', skill_dmg:'🔴 6x Obrażenia', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ Drużyna',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ Wynik:',
+            team_hp:'🛡️ HP drużyny:',
+            team_ammo:'🔫 Amunicja drużyny:',
+            skill_lasers:'🔵 Lasery',
+            skill_dmg:'🔴 6x Obrażenia',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ Drużyna',
             cooldown_ready:'✅ Gotowe',
-            move_left:'⬅️ Lewo', move_right:'Prawo ➡️',
-            quit:'✕ Wyjdź', back:'← Wstecz',
-            pause_title:'⏸️ WSTRZYMANO', pause_sub:'Gra wstrzymana', resume_btn:'▶ Wznów',
-            retry_title:'💀 Pokonany!', retry_desc:'Szef był zbyt silny! Spróbuj ponownie!', retry_btn:'🔄 Powtórz poziom',
-            timeup_title:'⏱️ Czas minął!', timeup_desc:'Skończył ci się czas!', timeup_score:'⭐ Wynik:', timeup_retry:'🔄 Spróbuj ponownie',
-            win_title_15:'🏆 JESTEŚ LEGENDĄ!', win_subtitle_15:'Wszystkich 15 szefów pokonanych!',
-            win_title_unlimited:'🔥 TRYB NIEOGRANICZONY UKOŃCZONY!', win_subtitle_unlimited:'Przetrwałeś {level} poziomów! Niesamowite!',
-            win_score:'⭐ Wynik:', win_restart:'🔄 Zagraj ponownie',
-            match_result_title_win:'🏆 ZWYCIĘSTWO!', match_result_title_loss:'💀 PORAŻKA!',
-            match_result_sub_win:'Pokonałeś AI!', match_result_sub_loss:'AI było zbyt silne tym razem!',
-            match_result_hits:'💥 Twoje trafienia:', match_result_ai_hits:'🤖 Trafienia AI:',
-            match_rematch:'🔄 Rewanż', match_home:'🏠 Strona główna'
+            move_left:'⬅️ Lewo',
+            move_right:'Prawo ➡️',
+            quit:'✕ Wyjdź',
+            back:'← Wstecz',
+            pause_title:'⏸️ WSTRZYMANO',
+            pause_sub:'Gra wstrzymana',
+            resume_btn:'▶ Wznów',
+            retry_title:'💀 Pokonany!',
+            retry_desc:'Szef był zbyt silny! Spróbuj ponownie!',
+            retry_btn:'🔄 Powtórz poziom',
+            timeup_title:'⏱️ Czas minął!',
+            timeup_desc:'Skończył ci się czas!',
+            timeup_score:'⭐ Wynik:',
+            timeup_retry:'🔄 Spróbuj ponownie',
+            win_title_15:'🏆 JESTEŚ LEGENDĄ!',
+            win_subtitle_15:'Wszystkich 15 szefów pokonanych!',
+            win_title_unlimited:'🔥 TRYB NIEOGRANICZONY UKOŃCZONY!',
+            win_subtitle_unlimited:'Przetrwałeś {level} poziomów! Niesamowite!',
+            win_score:'⭐ Wynik:',
+            win_restart:'🔄 Zagraj ponownie',
+            match_result_title_win:'🏆 ZWYCIĘSTWO!',
+            match_result_title_loss:'💀 PORAŻKA!',
+            match_result_sub_win:'Pokonałeś AI!',
+            match_result_sub_loss:'AI było zbyt silne tym razem!',
+            match_result_hits:'💥 Twoje trafienia:',
+            match_result_ai_hits:'🤖 Trafienia AI:',
+            match_rematch:'🔄 Rewanż',
+            match_home:'🏠 Strona główna'
         },
         tr: {
-            start_title:'🎯 Patronu Vur!', start_subtitle:'⚔️ Maceranı seç! ⚔️',
-            start_play:'▶ Mod Seç', start_skins:'🎨 Görünümler',
+            splash_by:'Oyun yapımcısı:',
+            splash_loading:'Macera yükleniyor...',
+            loading_title:'🎮 Yükleniyor...',
+            loading_sub:'Macera hazırlanıyor',
+            start_title:'🎯 Patronu Vur!',
+            start_subtitle:'⚔️ Maceranı seç! ⚔️',
+            start_play:'▶ Mod Seç',
+            start_skins:'🎨 Görünümler',
             mode_title:'🎮 Oyun Modunu Seç',
-            mode_15_label:'⚔️ 15 Seviye', mode_15_desc:'Tüm 15 patronu yen',
-            mode_unlimited_label:'🔥 Sınırsız Mod', mode_unlimited_desc:'Zamana karşı yarış! ⏱️',
-            mode_match_desc_prefix:'⚔️ 1v1 Eşleştirme —',
-            search_title:'🔍 Rakip aranıyor...', search_sub:'Uygun bir rakip bulunuyor',
+            mode_15_label:'⚔️ 15 Seviye',
+            mode_15_desc:'Tüm 15 patronu yen',
+            mode_unlimited_label:'🔥 Sınırsız Mod',
+            mode_unlimited_desc:'Zamana karşı yarış! ⏱️',
+            mode_match_desc_prefix:'⚔️ 1v1 Eşleştirme',
+            mode_match_suffix:'Yapay zeka rakibiyle savaş!',
+            search_title:'🔍 Rakip aranıyor...',
+            search_sub:'Uygun bir rakip bulunuyor',
             how_title:'⚔️ Nasıl Oynanır',
             how_instruction1:'🎯 Düşman mermilerine tıklayarak onları yok et!',
             how_instruction2:'💙 Patrona ateş etmek için herhangi bir yere tıkla!',
@@ -945,25 +1489,53 @@
             how_mode_info_unlimited:'🔥 Zamana karşı yarış! Her seviye 370 saniye ekler!',
             how_mode_info_matchmaking:'⚔️ Yapay zeka rakibiyle savaş! Her maçta Elo puanın değişir. Yapay zekayı yenmek için yeteneklerini kullan!',
             how_start:'⚔️ Oyunu Başlat',
-            skin_title:'🎨 Görünümünü Seç', skin_subtitle:'Karakterin için bir görünüm seç',
-            skin_score_label:'⭐ Skorun:', skin_status_select:'Kuşanmak için görünüm seç',
-            skin_status_unlock:'🎉 {name} açıldı!', skin_status_not_enough:'❌ Yeterli puan yok',
+            skin_title:'🎨 Görünümünü Seç',
+            skin_subtitle:'Karakterin için bir görünüm seç',
+            skin_score_label:'⭐ Skorun:',
+            skin_status_select:'Kuşanmak için görünüm seç',
+            skin_status_unlock:'🎉 {name} açıldı!',
+            skin_status_not_enough:'❌ Yeterli puan yok',
             skin_status_equip:'✅ {name} kuşanıldı!',
-            game_health:'❤️', game_boss:'👹', game_level:'📊', game_timer:'⏱️', game_score:'⭐ Skor:',
-            skill_lasers:'🔵 Lazer', skill_dmg:'🔴 6x Hasar', skill_hp:'🟢 +1000 HP', skill_team:'🛡️ Takım',
+            game_health:'❤️',
+            game_boss:'👹',
+            game_level:'📊',
+            game_timer:'⏱️',
+            game_score:'⭐ Skor:',
+            team_hp:'🛡️ Takım HP:',
+            team_ammo:'🔫 Takım mermi:',
+            skill_lasers:'🔵 Lazer',
+            skill_dmg:'🔴 6x Hasar',
+            skill_hp:'🟢 +1000 HP',
+            skill_team:'🛡️ Takım',
             cooldown_ready:'✅ Hazır',
-            move_left:'⬅️ Sol', move_right:'Sağ ➡️',
-            quit:'✕ Çık', back:'← Geri',
-            pause_title:'⏸️ DURAKLATILDI', pause_sub:'Oyun duraklatıldı', resume_btn:'▶ Devam',
-            retry_title:'💀 Yenildin!', retry_desc:'Patron çok güçlüydü! Tekrar dene!', retry_btn:'🔄 Seviyeyi Tekrar Dene',
-            timeup_title:'⏱️ Süre Doldu!', timeup_desc:'Zamanın tükendi!', timeup_score:'⭐ Skor:', timeup_retry:'🔄 Tekrar Dene',
-            win_title_15:'🏆 SEN BİR EFSANESİN!', win_subtitle_15:'Tüm 15 patron yenildi!',
-            win_title_unlimited:'🔥 SINIRSIZ MOD TAMAMLANDI!', win_subtitle_unlimited:'{level} seviye hayatta kaldın! İnanılmaz!',
-            win_score:'⭐ Skor:', win_restart:'🔄 Tekrar Oyna',
-            match_result_title_win:'🏆 ZAFER!', match_result_title_loss:'💀 YENİLGİ!',
-            match_result_sub_win:'Yapay zekayı geçtin!', match_result_sub_loss:'Bu sefer yapay zeka çok güçlüydü!',
-            match_result_hits:'💥 Senin isabetlerin:', match_result_ai_hits:'🤖 Yapay zeka isabetleri:',
-            match_rematch:'🔄 Rövanş', match_home:'🏠 Ana Sayfa'
+            move_left:'⬅️ Sol',
+            move_right:'Sağ ➡️',
+            quit:'✕ Çık',
+            back:'← Geri',
+            pause_title:'⏸️ DURAKLATILDI',
+            pause_sub:'Oyun duraklatıldı',
+            resume_btn:'▶ Devam',
+            retry_title:'💀 Yenildin!',
+            retry_desc:'Patron çok güçlüydü! Tekrar dene!',
+            retry_btn:'🔄 Seviyeyi Tekrar Dene',
+            timeup_title:'⏱️ Süre Doldu!',
+            timeup_desc:'Zamanın tükendi!',
+            timeup_score:'⭐ Skor:',
+            timeup_retry:'🔄 Tekrar Dene',
+            win_title_15:'🏆 SEN BİR EFSANESİN!',
+            win_subtitle_15:'Tüm 15 patron yenildi!',
+            win_title_unlimited:'🔥 SINIRSIZ MOD TAMAMLANDI!',
+            win_subtitle_unlimited:'{level} seviye hayatta kaldın! İnanılmaz!',
+            win_score:'⭐ Skor:',
+            win_restart:'🔄 Tekrar Oyna',
+            match_result_title_win:'🏆 ZAFER!',
+            match_result_title_loss:'💀 YENİLGİ!',
+            match_result_sub_win:'Yapay zekayı geçtin!',
+            match_result_sub_loss:'Bu sefer yapay zeka çok güçlüydü!',
+            match_result_hits:'💥 Senin isabetlerin:',
+            match_result_ai_hits:'🤖 Yapay zeka isabetleri:',
+            match_rematch:'🔄 Rövanş',
+            match_home:'🏠 Ana Sayfa'
         }
     };
 
@@ -975,16 +1547,18 @@
         var dict = TRANSLATIONS[lang] || TRANSLATIONS.en;
         document.querySelectorAll('[data-i18n]').forEach(function(el) {
             var key = el.getAttribute('data-i18n');
-            if(dict[key] !== undefined) el.innerHTML = dict[key];
+            if(dict[key] !== undefined) {
+                el.innerHTML = dict[key];
+            }
         });
         var matchDesc = document.getElementById('modeMatchDesc');
         var matchSub = document.getElementById('modeMatchSub');
         if(matchDesc && matchSub) {
-            var prefix = dict.mode_match_desc_prefix || '⚔️ 1v1 Matchmaking —';
-            matchDesc.textContent = prefix;
+            var prefix = dict.mode_match_desc_prefix || '⚔️ 1v1 Matchmaking';
+            var suffix = dict.mode_match_suffix || 'Battle an AI rival!';
             var eloVal = document.getElementById('modeMatchEloValue');
             var eloText = eloVal ? eloVal.textContent : '1000';
-            matchSub.innerHTML = prefix + ' <span style="color:#ffd700;font-weight:bold;">Elo: <span id="modeMatchEloValue">' + eloText + '</span></span>';
+            matchSub.innerHTML = prefix + ' — ' + suffix + ' <span style="color:#ffd700;font-weight:bold;">Elo: <span id="modeMatchEloValue">' + eloText + '</span></span>';
         }
         updateModeInfoText();
         updateWinScreen(isUnlimited, level);
@@ -1012,7 +1586,7 @@
     }
 
     // ============================================================
-    //  SOUND SYSTEM (ad-free) – kept but bypassed in init
+    //  SOUND SYSTEM (ad-free)
     // ============================================================
     var soundCache = {}, bgmAudio = null, activeAudioInstances = [], currentBGMKey = null;
     var SOUND_FILES = {
@@ -2056,7 +2630,7 @@
         if(autoShootInterval) clearInterval(autoShootInterval);
         var bgmKey = getRandomBGMKey();
         stopBGM(); stopAllOneShotSounds();
-        playSound(bgmKey, 0.25);
+        // Do NOT play BGM here – it's started by user click
         playSound('matchgo');
 
         playerHealth = 25000;
@@ -2095,7 +2669,7 @@
 
     function startLevel() {
         if(autoShootInterval) clearInterval(autoShootInterval);
-        if(!bgmAudio || bgmAudio.paused) { stopBGM(); playSound('bgm', 0.25); }
+        // Do NOT play BGM here – it's started by user click
         playerHealth = Math.max(3000 * Math.pow(0.92, level-1), 500);
         playerHealthEl.textContent = playerHealth.toFixed(0);
         playerTeam = []; aiTeam = [];
@@ -2454,9 +3028,14 @@
         }
         requestAnimationFrame(animateProgress);
     };
-    $('quitHowBtn').onclick = goHome;
+    // Start Game button – starts BGM on user click
     $('startGameBtn').onclick = function(){
         $('howScreen').style.display = 'none';
+        // Start background music on user click
+        if(!bgmAudio || bgmAudio.paused) {
+            stopBGM();
+            playSound('bgm', 0.25);
+        }
         if(isMatchmaking) startMatchmaking();
         else startGame();
     };
@@ -2504,7 +3083,7 @@
     });
 
     // ============================================================
-    //  INIT – FIXED: skip sound loading
+    //  INIT – load sounds in background, start game immediately
     // ============================================================
     var initialLang = loadData('gameLanguage', null);
     if(!initialLang || !TRANSLATIONS[initialLang]) initialLang = 'en';
@@ -2513,25 +3092,24 @@
 
     splashScreen.style.display = 'flex';
 
+    // Load game data & show start screen after 2 seconds
+    loadSkins();
+    loadMatchmakingData();
+    resizeCanvas();
+    $('loadingScreen').style.display = 'none';
 
-// Load game data & show start screen after 2 seconds
-loadSkins();
-loadMatchmakingData();
-resizeCanvas();
-$('loadingScreen').style.display = 'none';
+    setTimeout(function() {
+        splashScreen.style.display = 'none';
+        $('startScreen').style.display = 'flex';
+        updateEloPreview();
+    }, 2000);
 
-setTimeout(function() {
-    splashScreen.style.display = 'none';
-    $('startScreen').style.display = 'flex';
-    updateEloPreview();
-}, 2000);
-
-// Load sounds in the background
-loadAllSounds().then(function() {
-    console.log('✅ Sounds ready');
-}).catch(function() {
-    console.warn('⚠️ Some sounds missing, game still works');
-});
+    // Load sounds in the background
+    loadAllSounds().then(function() {
+        console.log('✅ Sounds ready');
+    }).catch(function() {
+        console.warn('⚠️ Some sounds missing, game still works');
+    });
 
     setTimeout(resizeCanvas, 100);
 })();
